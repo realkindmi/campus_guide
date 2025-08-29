@@ -1,0 +1,1234 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>퍼블리싱 | 모집 페이지 가이드</title>
+    <link rel="stylesheet" type="text/css" href="css/guide.css">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/common.js"></script>
+</head>
+<body>
+<div id="wrap">
+    <header id="header">
+        <div class="header_wrap">
+            <a href="index.html">
+                <h1 class="logo">메가스터디</h1>
+            </a>
+            <nav class="nav_gnb">
+                <a href="intro.html">인트로/학원메인</a>
+                <a class="on" href="mojip_pc.html">PC모집</a>
+                <a href="mojip_mo.html">MO모집</a>
+                <a href="ams.html">AMS</a>
+                <a href="etc.html">기타</a>
+            </nav>
+        </div>
+    </header>
+    <aside id="aside">
+        <div class="snb_wrap">
+            <ul class="nav_snb">
+                <li class="on">
+                    <a href="#section01">파일 및 폴더</a>
+                </li>
+                <li>
+                    <a href="#section02">마크업 작업규칙</a>
+                </li>
+                <li>
+                    <a href="#section03">CSS 작업규칙</a>
+                </li>
+                <li>
+                    <a href="#section04">레이아웃 구조</a>
+                </li>
+                <li>
+                    <a href="#section05">CSS 라이브러리</a>
+                </li>
+            </ul>
+        </div> 
+    </aside>
+    <div id="content">
+
+        <!-- 파일 및 폴더 -->
+        <section id="section01" class="scroll">
+            <h2>파일 및 폴더</h2>
+
+            <h3>모집 페이지 작업시 기본 폴더 구조</h3>
+            <div class="guide_desc">
+                <p>- 학원/nsu/nsu/년도/년도_서비스명</p>
+                <p>- 기숙/nsu/년도/년도_서비스명</p>
+                <p>- 재학/jaehak/jaehak</p>
+            </div>
+
+            <div class="guide_table">
+                <table class="table_style">
+                    <colgroup>
+                        <col style="width:7%;">
+                        <col style="width:48%;">
+                        <col style="width:10%;">
+                        <col style="width:10%;">
+                        <col style="width:10%;">
+                        <col style="width:15%;">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>학원</th>
+                            <td class="txtl">gangnam, seocho, gangbuk, noryangjin, sinchon, pyeongchon, bucheon, bundang, ilsan, songpa</td>
+                            <td>nsu</td>
+                            <td>nsu</td>
+                            <td>년도</td>
+                            <td>년도_서비스명</td>
+                        </tr>
+                        <tr>
+                            <th>기숙</th>
+                            <td class="txtl">yangji, yangjim, ansung</td>
+                            <td>nsu</td>
+                            <td></td>
+                            <td>년도</td>
+                            <td>년도_서비스명</td>
+                        </tr>
+                        <tr>
+                            <th>재학</th>
+                            <td class="txtl">seongbuk</td>
+                            <td>jaehak</td>
+                            <td>jaehak</td>
+                            <td>년도</td>
+                            <td>년도_서비스명</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- HTML 작업규칙 -->
+        <section id="section02" class="scroll">
+            <h2>마크업 작업규칙</h2>
+            <div class="guide_desc">
+                <h3>표준 문법의 사용</h3>
+                <p>- HTML은 해당 DTD의 명세에 맞게 작성한다.</p>
+                <p>- DTD를 제외한 모든 엘리먼트와 속성은 소문자로 작성.</p>
+                <p>- 속성의 값은 큰따움표("")로 묶는다.</p>
+                <p>- 특수기호는 Entity name을 사용하여 entity 코드로 변환한다.</p>
+            </div>
+            <div class="guide_table">
+                <h4>Entity Code</h4>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Character</th>
+                            <td>₩</td>
+                            <td>"</td>
+                            <td>&amp;</td>
+                            <td>&lt;</td>
+                            <td>&gt;</td>
+                            <td>&nbsp;</td>
+                            <td>·</td>
+                        </tr>
+                        <tr>
+                            <th>Entity Name</th>
+                            <td>&amp;#8361;</td>
+                            <td>&amp;quot;</td>
+                            <td>&amp;amp;</td>
+                            <td>&amp;lt;</td>
+                            <td>&amp;gt;</td>
+                            <td>&amp;nbsp;</td>
+                            <td>&amp;middot;</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>파일의 인코딩</h3>
+            <p>*.asp, *.css, *.js의 파일의 저장 방식을 euc-kr로 설정한다.</p>
+            <div class="guide_table">
+                <h4>문자셋(charset)별 인코딩</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>문자셋(charset)</th>
+                            <th>기본 인코딩</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>charset=euc-kr</td>
+                            <td>ANSI</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>코드 들여쓰기</h3>
+            <div class="guide_desc">
+                <p>- 코드의 가독성을 높이고 전체 HTML 구조를 쉽게 파악하기 위하여 들여쓰기 규칙을 준수한다.</p>
+                <p>- 마크업의 중첩이 깊어질 때마다 자식 엘리먼트는 1탭 들여 쓰고, 1탭의 크기는 공백 4칸으로 설정한다.</p>
+            </div>
+
+            <h3>엘리먼트의 기본 속성 지정 순서</h3>
+            <h4>&middot; A</h4>
+            <div class="guide_code">
+                <xmp class="syntax">
+                    <a href="#" title="새창" target="_blank">버튼1</a>
+                    <a href="javascript:alert('추후 오픈 예정입니다.')">버튼2</a>
+                </xmp>
+                    </div>
+            <div class="guide_desc">
+                <p>- alert창을 사용할 경우 href 속성에 자바스크립트로 처리한다</p>
+                <p>- 앵커 기능이 있다면 해당 요소의 id값을 작성한다.</p>
+                <p>- 새 창으로 페이지를 표시해야 할 경우 target 속성을 선택적으로 사용한다.</p>
+                <p>- 링크의 목표가 명확하지 않은 경우 title 속성의 값으로 부가적인 설명을 제공한다.</p>
+            </div>
+
+            <h4>&middot; Img</h4>
+            <div class="guide_code">
+            <xmp class="syntax">
+            <img src="img.gif" alt="대체텍스트"/>
+            </xmp>
+            </div>
+            <div class="guide_desc">
+                <p>- alt 속성은 반드시 제공되어야 의미가 없는 이미지에 한하여 빈 값을 허용한다.</p>
+                <p>- 유지보수의 편의성을 위하여 width, height 속성은 사용하지 않는다.</p>
+            </div>
+        </section>
+
+        <!-- CSS 작업규칙 -->
+        <section id="section03" class="scroll">
+            <h2>CSS 작업규칙</h2>
+
+            <h3>파일위치</h3>
+            <ul class="guide_list dis">
+                <li>
+                    <strong>공통</strong>/library/css/common_new.css
+                </li>
+                <li>
+                    <strong>재수 우선선발반</strong> /library/css/css_2023/public_2024_nsufirst.css
+                </li>
+                <li>
+                    <strong>재수종합반</strong> /library/css/css_2024/public_2024_jaejung.css
+                </li>
+                <li>
+                    <strong>재수 예체능반</strong> /library/css/css_2024/public_2024_art_gb.css
+                </li>
+                <li>
+                    <strong>포텐베이직반</strong> /library/css/css_2024/public_2024_poten.css
+                </li>
+                <li>
+                    <strong>퍼플반</strong> /library/css/css_2024/public_2024_purple.css
+                </li>
+                <li>
+                    <strong>Pre 반수시작반</strong> /library/css/css_2024/public_2024_half_pre.css
+                </li>
+                <li>
+                    <strong>반수시작반</strong> /library/css/css_2024/public_2024_half_pre.css
+                </li>
+                <li>
+                    <strong>썸머스쿨</strong> /library/css/css_2023/public_2023summer_mid.css
+                </li>
+                <li>
+                    <strong>윈터스쿨</strong> /library/css/css_2024/public_2024_winter.css
+                </li>
+                <li>
+                    <strong>파이널 문제풀이</strong> /library/css/css_2024/public_2024_final.css
+                </li>
+                <li>
+                    <strong>팀플반</strong> /library/css/css_2024/public_2024_teamplay.css
+                </li>
+                <li>
+                    <strong>팀플 반수시작반</strong> /library/css/css_2024/public_2024_half_pre.css
+                </li>
+            </ul>
+
+            <h3>네이밍 규칙</h3>
+            <div class="guide_desc">
+                <p>- 스타일 적용을 위한 id, class의 경우 단어와 단어 사이를 언더바(_)로 구분한 스네이크 케이스를 사용한다.</p>
+                <p>- 자바스크립트 적용을 위한 아이디, 라벨 연결을 위한 입력폼의 아이디의 경우 카멜케이스를 사용한다.</p>
+            </div>
+
+            <h3>css 작성순서</h3>
+            <div class="guide_table">
+                <table>
+                    <col style="width:7%;"/>
+                    <col style="width:15%;"/>
+                    <col style="width:78%;"/>
+                    <thead>
+                        <tr>
+                            <th>순서</th>
+                            <th>속성</th>
+                            <th>속성 값</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>display</td>
+                            <td>none, block, inline, inline-block, inline-table, list-item, table, table-caption, table-cell, table-column, table-column-group, table-footer-group, table-header-group, table-row, table-row-group</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>visibility</td>
+                            <td>visible, hidden, collapse</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>overflow</td>
+                            <td>visible, hidden, scroll, auto</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>float</td>
+                            <td>left, right, none</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>position</td>
+                            <td>absolute, fixed, relative, static</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3">6</td>
+                            <td>width</td>
+                            <td rowspan="3">auto, length(px), %</td>
+                        </tr>
+                        <tr>
+                            <td>max-width</td>
+                        </tr>
+                        <tr>
+                            <td>min-width</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3">7</td>
+                            <td>height</td>
+                            <td rowspan="3">auto, length(px), %</td>
+                        </tr>
+                        <tr>
+                            <td>max-height</td>
+                        </tr>
+                        <tr>
+                            <td>min-height</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>margin</td>
+                            <td>auto, length(px, em), %</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>padding</td>
+                            <td>auto, length(px, em), %</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>border</td>
+                            <td>border-width, border-style, border-color</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>background</td>
+                            <td>background-color, background-image, background-repeat, background-attachment, background-position</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>font</td>
+                            <td>font-style, font-variant, font-weigth, font-size/line-height, font-family</td>
+                        </tr>
+                        <tr>
+                        <td rowspan="6">13</td>
+                            <td>color</td>
+                            <td>hex_number, hex_number</td>
+                        </tr>
+                        <tr>
+                            <td>letter-spacing</td>
+                            <td>normal, length</td>
+                        </tr>
+                        <tr>
+                            <td>text-decoration</td>
+                            <td>none, underline, overline, line-through, blink</td>
+                        </tr>
+                        <tr>
+                            <td>text-align</td>
+                            <td>left, right, center, justify</td>
+                        </tr>
+                        <tr>
+                            <td>white-space</td>
+                            <td>normal, nowrap, pre, pre-line, pre-wrap</td>
+                        </tr>
+                        <tr>
+                            <td>word-spacing</td>
+                            <td>normal, length(px, em, etc)</td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>기타</td>
+                            <td>여기서 언급하지 않은 나머지 속성들은 폰트 속성 이후에 선언하며, 선언 순서는 무관하다.</td>
+                        </tr>
+                    </tbody>
+                  </table>
+            </div>
+        </section>
+
+        <!-- 레이아웃 구조 -->
+        <section id="section04" class="scroll">
+            <h2>레이아웃 구조</h2>
+
+            <h3>기본 레이아웃 - Top</h3>
+            <div class="guide_code">
+        <xmp class="syntax">
+        <div class="lec_top">
+            <div class="wide_top_wrap">
+                <div class="top_wrap">
+                
+                    <!-- left_menu_wrap -->
+                    <div class="left_menu_wrap">
+                        <!--  레프트 메뉴//-->
+                        <div class="sideArea <%=GetCampusColorType()%>">
+                            <!--#include virtual="/library/include/common/sub_menu.asp" -->
+                        </div>
+                        <!-- //레프트 메뉴 -->
+                        <h3>메가스터디학원</h3>
+                    </div>
+                    <!-- //left_menu_wrap -->
+                
+                    <!-- right_wrap -->
+                    <div class="right_wrap">
+                        <div class="act_wrap">
+                            <img src="">
+                        </div>
+                        <div class="btn_wrap">
+                            <p class="box typeA" alt="">약간 명 모집 중</p>
+                            <a class="box typeB" href="javaScript:goApplySimple(253,'');">
+                                <span>온라인 원서접수</span>
+                            </a>
+                            <a id="applyViewBnt" class="box typeC" href="javaScript:goApplySimpleView(253);">
+                                <span>접수 내역 확인</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- //right_wrap -->
+                </div>
+            </div>
+        </div>
+        <!-- 탭 -->
+        <div class="lec_tab">
+            <ul class="col4">
+                <li><a href="menu_01.asp#01" class="on">menu1</a></li>
+                <li><a href="menu_02.asp#01">menu2</a></li>
+                <li><a href="menu_03.asp#01">menu3</a></li>
+                <li><a href="menu_04.asp#01">menu4</a></li>
+            </ul>
+        </div>
+         <!--// 탭 --> 
+        
+        <div class="r_quickMn">
+            <ul class="q_menu">
+                <li>
+                    <a href="/help/qna.asp" target="_blank">
+                        <strong>
+                            <img src="/library/campus_common/2022_jaejung/r_quickMn_icon01.png" alt="" />온라인 상담
+                        </strong>
+                    </a>
+                </li>
+                <li>
+                    <strong>
+                        <img src="/library/campus_common/2022_jaejung/r_quickMn_icon02.png" alt="" />전화 상담
+                    </strong><br>
+                    <span>02-123-4567</span>
+                </li>
+            </ul>
+        </div>    
+        </xmp>
+            </div>
+
+            <h3>상단버튼</h3>
+            <div class="guide_code">
+        <xmp class="syntax">
+        <div class="right_wrap">
+            <div class="btn_wrap">
+                <p class="box typeA" alt="">약간 명 모집 중</p>
+                <a class="box typeB" href="javaScript:goApplySimple(253,'');">
+                    <span>온라인 원서접수</span>
+                </a>
+                
+                <a class="box typeC" href="/campus_common/campus/campus_pdf_file.asp?fCode=P2312200001" target="_blank"><span>브로슈어 보기</span></a>
+                <a id="applyViewBnt" class="box typeC" href="javaScript:goApplySimpleView(253);">
+                    <span>접수 내역 확인</span>
+                </a>
+            </div>
+        </div>
+        </xmp>
+            </div>
+            
+            <h4 class="mt20">&middot; 기본버튼 </h4>
+            <h5>.wide_top_wrap .right_wrap .btn_wrap .box</h5>
+            <div class="guide_area">
+                <div class="btn_wrap col4">
+                    <p class="box typeA" style="background:#595e9b;">예체능반</p>
+                    <p class="box typeA" style="background:rgba(0, 0, 0, 0.1)">팀플반</p>
+                    <p class="box typeA" style="background:#193868;">재수반</p>
+                    <p class="box typeA" style="background:#2b124a;">퍼플반</p>
+                    <p class="box typeA" style="background:#00173d;">파이널 문제풀이반</p>
+                    <p class="box typeA" style="background:rgba(0,0,0,0.35);">그 외</p>
+                </div>
+            </div>
+            <h4 class="mt20">&middot; 접수버튼 </h4>
+            <h5>.wide_top_wrap .right_wrap .btn_wrap .box.typeB</h5>
+            <div class="guide_area">
+                <div class="btn_wrap col4">
+                    <a class="box typeB" href="javaScript:void(0);"><span>온라인 원서접수</span></a>
+                </div>
+            </div>
+            <h4 class="mt20">&middot; 기타버튼 </h4>
+            <h5>.wide_top_wrap .right_wrap .btn_wrap .box.typeC</h5>
+            <div class="guide_area">
+                <div class="btn_wrap col4">
+                    <a class="box typeC" href="javaScript:void(0);"><span>접수 내역 확인</span></a>
+                </div> 
+            </div>
+
+            <h3>탭</h3>
+            <div class="guide_code">
+        <xmp class="syntax">
+        <div class="lec_tab">
+            <ul class="col4">
+                <li><a href="menu_01.asp#01" class="on">menu1</a></li>
+                <li><a href="menu_02.asp#01">menu2</a></li>
+                <li><a href="menu_03.asp#01">menu3</a></li>
+                <li><a href="menu_04.asp#01">menu4</a></li>
+            </ul>
+        </div>
+        </xmp>
+            </div>
+            <div class="guide_desc">
+                <p>탭 개수에 따라 다음의 클래스를 사용한다.</p>
+            </div>
+            <div class="guide_code">
+        <xmp class="syntax">
+        .lec_tab .col2 li {width: 50%;}
+        .lec_tab .col3 li {width: 33.3%;}
+        .lec_tab .col4 li {width: 25%;}
+        .lec_tab .col5 li {width: 20%;}
+        .lec_tab .col6 li {width: 167px;}
+        .lec_tab .col6 li:first-child {width: 165px;}
+        .lec_tab .col7 li {width: 143px;}
+        .lec_tab .col7 li:first-child {width: 142px;}
+        </xmp>
+            </div>
+
+            <h3>탭 관련 스크립트</h3>
+            <div class="guide_desc">
+                <p>탭 클릭시 화면 상단으로 고정되는 스크립트</p>
+            </div>
+            <div class="guide_code">
+        <xmp class="syntax">
+        <script>
+            $(function(){
+                var num = $( '.lec_tab' ).offset().top;
+                menuTop();
+                
+                $(window).bind('scroll', function() {
+                    menuTop();
+                });
+            
+                function menuTop() {
+                    if ($(this).scrollTop() > num) {
+                        $('.lec_tab').css({
+                            top: '0px', "position": "fixed"
+                        });
+                        $('.r_quickMn').show();
+                    } else {
+                        $('.lec_tab').css({
+                            "position": "relative"
+                        });
+                        $('.r_quickMn').hide();
+                    }
+                }
+            });
+        </script>
+        </xmp>
+            </div>
+
+            <h3>타이틀</h3>
+            <div class="guide_desc">
+                <p>동영상 기본 크기 : 가로 1000px, 세로 550px</p>
+            </div>
+            <div class="guide_code">
+        <xmp class="syntax">
+        <div class="top_tit">
+            <p class="sub_tit">
+                서브 타이틀
+            </p>
+            <h2 class="main_tit">
+                메인 타이틀
+            </h2>
+            <p class="tit_txt">
+                타이틀 텍스트
+            </p>
+        </div>
+
+        /* CSS */
+        .star {display:inline-block; font-family: 'Montserrat' !important; vertical-align:bottom; text-indent:0;}
+        .top_tit .star {font-weight:500;}
+        .top_tit .main_tit .star {font-weight:900;}
+
+        .top_tit * {font-family:"Noto Sans KR";}
+        .top_tit.fcw * {color:#fff !important;}
+        .top_tit .main_tit {font-size:66px; line-height:78px; font-weight:bold; color:#000; letter-spacing:-0.5px;}
+        .top_tit .sub_tit + .main_tit {margin-top:7px;}
+        .top_tit .sub_tit {font-size:36px; line-height:48px; color:#000;}
+        .top_tit .tit_txt {margin-top:27px; font-size:18px; line-height:30px; font-weight:300; color:#555;}
+        .top_tit .tit_txt strong {font-weight:bold; color:#555;}
+        </xmp>
+            </div>
+            <div class="guide_area">
+                <div class="top_tit">
+                    <p class="sub_tit">
+                        서브 타이틀
+                    </p>
+                    <h2 class="main_tit">
+                        메인 타이틀
+                    </h2>
+                    <p class="tit_txt">
+                        타이틀 텍스트
+                    </p>
+                </div>
+            </div>
+
+            <h4>*팀플 타이틀</h4>
+            <h5>.star</h5>
+            <div class="guide_desc">
+                <p>팀플의 별 꼭지점은 6개로 아래와 같이 지정된 폰트 스타일을 적용하도록 한다.</p>
+            </div>
+            <div class="guide_code">
+        <xmp class="syntax">
+        <div class="top_tit">
+            <p class="sub_tit">
+                <span class="star">*</span>팀플에 <span class="star">*</span>팀플반을 담다
+            </p>
+        </div>
+        </xmp>
+            </div>
+            <div class="guide_area">
+                <div class="top_tit">
+                    <p class="main_tit">
+                        <span class="star">*</span>팀플에 <span class="star">*</span>팀플반을 담다
+                    </p>
+                </div>
+            </div>
+
+            <h3>동영상</h3>
+            <div class="guide_desc">
+                <p>동영상 기본 크기 : 가로 1000px, 세로 550px</p>
+            </div>
+            <div class="guide_code">
+        <xmp class="syntax">
+        //기본 사이즈
+        <iframe width="1000" height="550" src="https://www.youtube.com/" title="YouTube video player" frameborder="0"
+         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+
+        //영상코드 사용
+        <iframe width="854" height="480" src="https://ansung.megastudy.net/campus_common/campus/campus_mov.asp?
+        mCode=U2309070001" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write;
+         encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </xmp>
+            </div>
+
+
+            <h3>팝업</h3>
+            <div class="guide_code">
+        <xmp class="syntax">
+        <!-- 팝업 동작 버튼 -->
+        <a href="javascript:void(0);" data-open="layerOpen" alt="layer01">자세히 보기</a>
+
+        <!-- 팝업 백그라운드 dim -->
+        <div class="modal_dim"></div>
+        
+        <!-- 팝업창 -->
+        <div id="layer01" class="layer layer_popup">
+            <img class="close_btn" src="<%=Application("img_path")%>/library/yangjim/nsu/2024/2024_jaejung/layer_close_btn.png" alt=""/>
+            <div class="lecture wide">
+                <div class="lec_info mt55" style="padding-bottom:0;">
+                    <img src="<%=Application("img_path")%>/library/yangjim/nsu/2024/2024_jaejung/layer01_stu01.png" alt="" />
+                </div>
+                <div class="lec_info mt40" style="padding-bottom:0;">
+                    <img src="<%=Application("img_path")%>/library/yangjim/nsu/2024/2024_jaejung/layer_sub_tit01.png" alt="" />
+                    <table cellspacing="0" cellpadding="0" border="0" class="lec_info_tstyle4 gray_table mt15">
+                        <colgroup>
+                            <col width="*">
+                            <col width="14%" span="6">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col" rowspan="2">구분</th>
+                                <th scope="col" rowspan="2">국어</th>
+                                <th scope="col">수학</th>
+                                <th scope="col" rowspan="2">영어</th>
+                                <th scope="col" colspan="2">과학탐구</th>
+                                <th scope="col" rowspan="2" class="brL">국수과(2)</th>
+                            </tr>
+                            <tr>
+                                <th scope="col">가형</th>
+                                <th scope="col">물리학Ⅰ</th>
+                                <th scope="col">화학Ⅱ</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>백분위</th>
+                                <td>98</td>
+                                <td>48</td>
+                                <td rowspan="2" class="brL">1</td>
+                                <td>51</td>
+                                <td>50</td>
+                                <td rowspan="2" class="brL">196.5</td>
+                            </tr>
+                            <tr>
+                                <th>등급</th>
+                                <td>1</td>
+                                <td>5</td>
+                                <td>5</td>
+                                <td>5</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        </xmp>
+            </div>
+
+            <div class="guide_area">
+                <div class="wide">
+                    <div class="modal_dim" style="display: block;"></div>
+                    <div id="layer01" class="layer layer_popup open">
+                        <img class="close_btn" src="https://img.megastudy.net/campus/library/v2015/library/sinchon/nsu/nsu/2023_half/layer_close_btn.jpg" alt="">
+                        <div class="lecture wide">
+                            <div class="lec_info" style="padding-bottom:0;">
+                                <div class="img_wrap mt80">
+                                    <img src="https://img.megastudy.net/campus/library/v2015/library/songpa/nsu/nsu/2024/2024_teamplay/tab01_layer_title01.png" alt="" border="0">
+                                </div>
+                                <table cellspacing="0" cellpadding="0" border="0" class="lec_info_tstyle4 mt60">
+                                    <colgroup>
+                                        <col width="20%">
+                                        <col width="*">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">선발 조건</th>
+                                            <td class="taL">
+                                                · 전년도 수능 성적으로만 선발<br>
+                                                <span class="table_text">※ 자격 조건 미달자 별도 유시험 진행</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">특징</th>
+                                            <td class="taL">
+                                                · 취약 과목 보완을 위한 완전 선택 수업 진행<br>
+                                                · 수업의 최소화를 위한 자기주도학습 시간 절대 보장
+                                            </td>
+                                        </tr>  
+                                        <tr>
+                                            <th scope="row">수업 구성</th>
+                                            <td class="taL">
+                                                · 국수영 수업만 진행(무료 제공)<br>
+                                                · 재수종합반+퍼플반(독학재수)의 통합형 과정<br>
+                                                <span class="table_text">※ 수업 수강 선택권 학생에게 부여</span><br>
+                                                · 팀플Ⅰ 만을 위한 수업 연간 커리큘럼 운영(별도 교재 사용)
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>								
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h4>&middot; Type1</h4>
+            <div class="guide_area">
+                <img class="close_btn" src="https://img.megastudy.net/campus/library/v2015/library/sinchon/nsu/nsu/2023_half/layer_close_btn.jpg" alt="">
+            </div>
+            <h4>&middot; Type2</h4>
+            <div class="guide_area">
+                <img class="close_btn" src="https://img.megastudy.net/campus/library/v2015/library/yangjim/nsu/2024/2024_jaejung/layer_close_btn.png" alt="">
+            </div>
+
+            <h3>팝업 스크립트</h3>
+            <div class="guide_code">
+        <xmp class="syntax">
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('[data-open="layerOpen"]').on("click", function(){
+                        var temp = $(this).attr("alt");
+                        console.log(temp);
+                        $("#"+temp).addClass("open");
+                        $("#"+temp).slideDown(300);
+                        $(".modal_dim").fadeIn();
+                        var w_w = $(window).width() / 2 - 500;
+                        var w_h = $(window).height() / 2 - 335;
+                        $(".layer").css("left", w_w);
+                        $(".layer").css("top", w_h);
+                        $("body").addClass("hid");
+                    });
+                    $(".modal_dim, .layer .close_btn").click(function () {
+                        $(".modal_dim").fadeOut();
+                        $(".layer").removeClass("open");
+                        $("body").removeClass("hid");
+                    }); 
+            });
+        </script>
+        </xmp>
+        </section>
+
+        <!-- CSS 라이브러리 -->
+        <section id="section05" class="scroll">
+            <h2>CSS 라이브러리</h2>
+
+            <h3>마진 간격</h3>
+            <div class="guide_desc">
+                <p>간격에 맞게 다음의 클래스를 사용한다.</p>
+            </div>
+            <div class="guide_code">
+        <xmp class="syntax">
+        .mt0{margin-top:0px !important}
+        .mt2{margin-top:2px !important}
+        .mt3{margin-top:3px !important}
+        .mt5{margin-top:5px !important}
+        .mt8{margin-top:8px !important}
+        .mt9{margin-top:9px !important}
+        .mt10{margin-top:10px !important}
+        .mt13{margin-top:13px !important}
+        .mt15{margin-top:15px !important}
+        .mt20{margin-top:20px !important}
+        .mt25{margin-top:25px !important}
+        .mt30{margin-top:30px !important}
+        .mt35{margin-top:35px !important}
+        .mt40{margin-top:40px !important}
+        .mt45{margin-top:45px !important}
+        .mt50{margin-top:50px !important}
+        .mt55{margin-top:55px !important}
+        .mt60{margin-top:60px !important}
+        .mt65{margin-top:65px !important}
+        .mt70{margin-top:70px !important}
+        .mt75{margin-top:75px !important}
+        .mt80{margin-top:80px !important}
+        .mt85{margin-top:85px !important}
+        .mt90{margin-top:90px !important}
+        .mt95{margin-top:95px !important}
+        .mt100{margin-top:100px !important}
+        .mt110{margin-top:110px !important}
+        .ml15{margin-left:15px !important}
+        .ml17{margin-left:17px !important}
+        .ml20{margin-left:20px !important}
+        .ml25{margin-left:25px !important}
+        </xmp>
+            </div>
+
+            <h3>정렬</h3>
+            <div class="guide_desc">
+                <p>정렬방식에 따라 다음의 클래스를 사용한다.</p>
+            </div>
+            <div class="guide_code">
+        <xmp class="syntax">
+        .taC{text-align:center !important}
+        .taR{text-align:right !important}
+        .taL{text-align:left !important}
+        .fl{float:left !important}
+        .fr{float:right !important}
+        .clear{}
+        .clear:after{display:block;clear:both;content:'';*zoom:1}
+        .vm{vertical-align:middle !important}
+        .vt{vertical-align:top !important}
+        .brk{word-wrap:break-word; word-break:break-all}
+        </xmp>
+            </div>
+
+            <h3>텍스트</h3>
+            <h4>&middot; 폰트</h4>
+            <div class="guide_desc">
+                <p>폰트 사이즈에 따라 다음의 클래스를 사용한다.</p>
+            </div>
+            <div class="guide_code">
+        <xmp class="syntax">
+        .fz11{font-size:11px !important;letter-spacing:-0.1px !important}
+        .fz12{font-size:12px !important;letter-spacing:-0.1px !important}
+        .fz13{font-size:13px !important}
+        .fz14{font-size:14px !important}
+        .fz15{font-size:15px !important}
+        .fz15_1{font-size:15px !important;letter-spacing:-1px}
+        .fz16{font-size:16px !important}
+        .fz16_n{font-size:16px !important;letter-spacing:-1px}
+        .fz17{font-size:17px !important}
+        .fz18{font-size:18px !important}
+        .fz18_1{font-size:18px !important;letter-spacing:-1px}
+        .fz19{font-size:19px !important}
+        .fz20{font-size:20px !important;letter-spacing:-1px}
+        .fz21{font-size:21px !important;letter-spacing:-1px}
+        .fz22{font-size:22px !important;letter-spacing:-1px}
+        .fz23{font-size:23px !important;letter-spacing:-1px}
+        .fz24{font-size:24px !important;letter-spacing:-1px}
+        .fz25{font-size:25px !important;letter-spacing:-1px}
+        .fz30{font-size:30px !important;letter-spacing:-2px}
+        </xmp>
+            </div>
+
+            <h4>&middot; 타이틀</h4>
+            <h5>.lec_info_title</h5>
+            <div class="guide_area">
+                <div class="wide">
+                    <h3 class="lec_info_title">타이틀</h3>
+                </div>
+            </div>
+
+            <h4>&middot; 서브 타이틀</h4>
+            <h5>.lec_sub_title</h5>
+            <div class="guide_area">
+                <div class="wide">
+                    <h4 class="lec_sub_title">서브 타이틀</h4>
+                </div>
+            </div>
+
+            <h4>&middot; 강조 텍스트</h4>
+            <h5>.point_color</h5>
+            <div class="guide_area">
+                TEXT TEXT TEXT TEXT TEXT <strong class="point_color">TEXT TEXT TEXT TEXT TEXT</strong> TEXT TEXT TEXT TEXT TEXT
+            </div>
+            
+            <h4>&middot; 설명</h4>
+            <h5>.wide .lec_info .gray_box</h5>
+            <div class="guide_area">
+                <div class="wide">
+                    <div class="lec_info">
+                        <div class="gray_box">
+                            ※ 내용
+                            <ul class="ml17 mt5">
+                                <li>· 리스트</li>
+                                <li>· 리스트</li>
+                                <li>· 리스트</li>
+                            </ul><br>
+                            ※ 내용
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h5>.gray_box .mt20</h5>
+            <h5>style="padding:0; background:none;"</h5>
+            <div class="guide_code">
+        <xmp class="syntax">
+        <p class="gray_box mt20" style="padding:0; background:none;">※ 배경색 없는 텍스트</p>
+        </xmp>
+            </div>
+            <div class="guide_area">
+                <p class="gray_box mt20" style="padding:0; background:none;">※ 배경색 없는 텍스트</p>
+            </div>
+
+            <h3>테이블</h3>
+
+            <h4>&middot; 기본 테이블</h4>
+            <div class="guide_area pd">
+                <div class="wide">
+                    <table cellspacing="0" cellpadding="0" border="0" class="lec_info_tstyle4">
+                        <colgroup>
+                            <col width="*">
+                            <col width="80%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>텍스트</th>
+                                <th>텍스트</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>텍스트</th>
+                                <td class="taL">
+                                    텍스트
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>텍스트</th>
+                                <td class="taL">
+                                    텍스트
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>텍스트</th>
+                                <td class="taL">
+                                    텍스트
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- <h4>&middot; 배경색 있는 테이블</h4>
+            <div class="guide_area pd bg">
+                <div class="wide">
+                    <table cellspacing="0" cellpadding="0" border="0" class="lec_info_tstyle4 bg_gr">
+                        <colgroup>
+                            <col width="*">
+                            <col width="80%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>텍스트</th>
+                                <th>텍스트</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>텍스트</th>
+                                <td class="taL">
+                                    텍스트
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>텍스트</th>
+                                <td class="taL">
+                                    텍스트
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>텍스트</th>
+                                <td class="taL">
+                                    텍스트
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div> -->
+
+            <h4 class="mt20">&middot; 시간표 </h4>
+            <div class="guide_desc">
+                <p>시간표 백그라운드 컬러는 다음 클래스를 사용한다</p>
+            </div>
+            <div class="guide_code">
+        <xmp class="syntax">
+        .bc_lRD {background-color:#fbe8e7 !important;}
+        .bc_lOR {background-color:#ffeedf !important;}
+        .bc_lYL {background-color:#fef8e1 !important;}
+        .bc_lGN {background-color:#f0f6e3 !important;}
+        .bc_lBL {background-color:#e9f6fa !important;}
+        .bc_lNV {background-color:#e1ebf6 !important;}
+        .bc_lVT {background-color:#ece7f4 !important;}
+        .bc_lPK {background-color:#fbe8f0 !important;}
+        .bc_lGY {background-color:#f5f5f5 !important;}
+        .bc_DGY {background-color:#eeeeee !important;}
+        .bc_LlNV {background-color:#f3f6ff !important;}
+        .bc_YLW{background:#fffde2;}
+        .bc_SRD{background:#fcebec !important;}
+        </xmp>
+            </div>
+            <div class="guide_area">
+                <div class="wide">
+                    <table cellspacing="0" cellpadding="0" border="0" class="lec_info_tstyle4">
+                        <colgroup>
+                        <col width="*">
+                        <col width="14%" span="5">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>구분</th>
+                                <th>월</th>
+                                <th>화</th>
+                                <th>수</th>
+                                <th>목</th>
+                                <th>금</th>
+                                <th>토</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>09:00 ~ 13:00</th>
+                                <td colspan="5" rowspan="2">TEXT</td>
+                                <td rowspan="3">TEXT</td>
+                            </tr>
+                            <tr>
+                                <th>13:30 ~ 17:30</th>
+                            </tr>
+                            <tr>
+                                <th>17:00 ~ 18:00</th>
+                                <td class="bc_lRD" rowspan="3">.bc_lRD</td>
+                                <td class="bc_lOR" rowspan="4">.bc_lOR</td>
+                                <td class="bc_lYL" rowspan="3">.bc_lYL</td>
+                                <td class="bc_lGN" rowspan="2">.bc_lGN</td>
+                                <td class="bc_lBL" rowspan="3">.bc_lBL</td>
+                            </tr>
+                            <tr>
+                                <th>18:00 ~ 19:00</th>
+                                <td class="bc_lNV" rowspan="2">.bc_lNV</td>
+                            </tr>
+                            <tr>
+                                <th>19:00 ~ 20:00</th>
+                                <td class="bc_LlNV" rowspan="3">.bc_LlNV</td>
+                            </tr>
+                            <tr>
+                                <th>20:00 ~ 21:00</th>
+                                <td class="bc_lGY" rowspan="2">.bc_lGY</td>
+                                <td class="bc_lPK" rowspan="2">.bc_lPK</td>
+                                <td class="bc_YLW" rowspan="2">.bc_YLW</td>
+                                <td class="bc_SRD" rowspan="2">.bc_SRD</td>
+                            </tr>
+                            <tr>
+                                <th>21:00 ~ 22:00</th>
+                                <td class="bc_DGY">.bc_DGY</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <h4>&middot; 2단 시간표 </h4>
+            <h5>.tableBox</h5>
+            <h5>.table1, table2</h5>
+            <div class="guide_area">
+                <div class="wide">
+                    <div class="tableBox">
+                        <table cellspacing="0" cellpadding="0" border="0" class="lec_info_tstyle4 table1">
+                            <caption></caption>
+                            <colgroup>
+                                <col width="30%">
+                                <col width="*">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>구분</th>
+                                    <th>월요일 ~ 금요일</th> 
+                                </tr> 
+                            </thead>
+                            <tbody>
+                                <tr> 
+                                    <th>~ 07:40</th>
+                                    <td>등원</td> 
+                                </tr>
+                                <tr>
+                                    <th>08:00 ~ 08:50</th>
+                                    <td rowspan="4" class="brL">수업</td>
+                                </tr>
+                                <tr>
+                                    <th>09:00 ~ 09:50</th> 
+                                </tr>
+                                <tr>
+                                    <th>10:00 ~ 10:50</th>
+                                </tr>
+                                <tr>
+                                    <th>11:00 ~ 11:50</th>
+                                </tr>
+                                <tr>
+                                    <th>12:00 ~ 12:40</th>
+                                    <td>점심식사</td> 
+                                </tr>
+                                <tr>
+                                    <th>13:00 ~ 13:10</th>
+                                    <td rowspan="6" class="brL">자기주도학습 / 특강</td> 
+                                </tr>
+                                <tr>
+                                    <th>13:10 ~ 14:00</th>
+                                </tr>
+                                <tr>
+                                    <th>14:10 ~ 15:00</th>
+                                </tr>
+                                <tr>
+                                    <th>15:10 ~ 16:00</th>
+                                </tr>
+                                <tr>
+                                    <th>16:10 ~ 17:00</th>
+                                </tr>
+                                <tr>
+                                    <th>17:10 ~ 18:00</th>
+                                </tr>
+                                <tr>
+                                    <th>18:00 ~ 18:50</th>
+                                    <td>저녁식사</td> 
+                                </tr>
+                                <tr>
+                                    <th>19:00 ~ 22:00</th>
+                                    <td>자기주도학습 / 질의응답 / 특강</td> 
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table cellspacing="0" cellpadding="0" border="0" class="lec_info_tstyle4 table2" style="height: 956px;">
+                            <caption></caption>
+                            <colgroup>
+                                <col width="30%">
+                                <col width="35%" span="2">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>구분</th>
+                                    <th>토요일</th> 
+                                    <th>일요일</th> 
+                                </tr> 
+                            </thead>
+                            <tbody>
+                                <tr> 
+                                    <th>~ 08:50</th>
+                                    <td colspan="2">등원</td> 
+                                </tr>
+                                <tr>
+                                    <th>09:00 ~ 12:10</th>
+                                    <td>자기주도학습<br>(의무)</td>
+                                    <td>자기주도학습<br>(선택)</td>
+                                </tr>
+                                <tr>
+                                    <th>12:10 ~ 13:00</th> 
+                                    <td colspan="2">점심식사</td>
+                                </tr> 
+                                <tr>
+                                    <th>13:00 ~ 18:00</th>
+                                    <td>자기주도학습<br>(의무)</td>
+                                    <td>자기주도학습<br>(선택)</td>
+                                </tr> 
+                                <tr>
+                                    <th>18:00 ~ 18:50</th>
+                                    <td colspan="2">저녁식사</td> 
+                                </tr>
+                                <tr>
+                                    <th>19:00 ~ 22:00</th>
+                                    <td colspan="2">자기주도학습 (선택)</td> 
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <h3>버튼</h3>
+            <h4>&middot; 원서접수 버튼</h4>
+            <h5>.reN_btn_area .btn</h5>
+            <div class="guide_area">
+                <div class="reN_btn_area">
+                    <a class="btn" href="#">온라인 원서접수</a>
+                </div>
+            </div>
+
+            <h4>&middot; 테이블 내 버튼</h4>
+            <h5>.link_area .btn_send2</h5>
+            <div class="guide_area">
+                <span class="link_area">
+                    <a href="#" class="btn_send2" target="_blank"><span>설명회 사전예약하기</span></a>
+                </span>
+            </div>
+            <h5>.btn_icon .dark_arrow</h5>
+            <div class="guide_area">
+                <a href="https://yangji.megastudy.net/help/faq.asp" class="btn_icon dark_arrow" target="_blank">
+                    <span>자주 묻는 질문 바로가기</span>
+                </a>
+            </div>
+        </section>
+    </div>
+</div>
+<!-- <script>
+$(function() {
+    var scrollContainer = document.querySelector('body');
+
+    scrollContainer.addEventListener('scroll', function(event) {
+        // 왼쪽 스크롤 위치를 항상 0으로 설정
+        // scrollContainer.scrollLeft = 0;
+
+        console.log('dd');
+    });
+});
+</script> -->
+</body>
+</html>

@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>퍼블리싱 | 모집 페이지 가이드</title>
+    <link rel="stylesheet" type="text/css" href="css/guide.css">
+    <link rel="stylesheet" type="text/css" href="css/input.css"> 
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/common.js"></script>
+</head>
+<body>
+<div id="wrap">
+    <header id="header">
+        <div class="header_wrap">
+            <a href="index.html">
+                <h1 class="logo">메가스터디</h1>
+            </a>
+            <nav class="nav_gnb">
+                <a href="intro.html">인트로/학원메인</a>
+                <a href="mojip_pc.html">PC모집</a>
+                <a href="mojip_mo.html">MO모집</a>
+                <a href="ams.html">AMS</a>
+                <a class="on" href="etc.html">기타</a>
+            </nav>
+        </div>
+    </header>
+    <aside id="aside">
+        <div class="snb_wrap">
+            <ul class="nav_snb">
+                <li class="on">
+                    <a href="#section01">MO 만족도조사</a>
+                </li>
+                <li>
+                    <a href="#section02">인트로 공지사항(PC/MO)</a>
+                </li>
+                <li>
+                    <a href="#section03">학원 메인 페이지 팝업</a>
+                </li>
+                <li>
+                    <a href="#section04">탭</a>
+                </li>  
+                <li>
+                    <a href="#section05">버튼</a>
+                </li>  
+            </ul>
+        </div> 
+    </aside>
+    <div id="content">
+
+        <!-- MO 만족도조사 -->
+        <section id="section01" class="scroll">
+            <h2>MO 만족도조사</h2>
+
+            <h3>만족도조사 페이지 작업시 작업 순서</h3>
+            <div class="guide_desc">
+                <p>- 개발팀에서 1차 개발 작업 후 퍼블리싱 작업자에게 폴더 및 경로 전달</p>
+                <p>- 만족도조사 페이지 초기화 URL 및 권한계정 전달 받기 &nbsp;&nbsp;ex&#41; 강남 / 562883</p>
+                <p>- 만족도조사 테스트 페이지 계정 전달 받기 &nbsp;&nbsp;ex&#41; mstest001 / @mega7788</p>
+            </div>
+ 
+            <h3>만족도조사 CSS 작업</h3>
+            <ul class="guide_list dis">
+                <li>
+                    <strong>공통 CSS 위치</strong>/common/bootstrap_4.1.2/min/survey.css 
+                </li> 
+            </ul>  
+
+            <div class="guide_desc mt30">
+                <p>- 작업 시 Class명을 새로 생성하여 추가하는 방식으로 작업 &nbsp;&nbsp;ex&#41; .perpl20230424 </p> 
+                <p>- 모바일 디바이스별 해상도 작업은 width : 320px 까지</p> 
+            </div>
+            <div class="guide_code">
+        <xmp class="syntax">
+            <body class="jaejung main perpl20230424">
+                <div class="container">
+                    <div>
+                        <img src="<%=Application("img_path_mob")%>/common/img/2024_survey/perpl/index_img.jpg" alt="" style="width:100%;max-width:100%;">
+                    </div>
+                    <div class="btm_btn">
+                        <a onclick="<%=txtScript%>" style="cursor:hand;">
+                            <img src="<%=Application("img_path_mob")%>/common/img/2024_survey/perpl/index_btn.jpg" alt="" style="width:auto; height:100%; cursor:pointer;" >
+                        </a>
+                    </div>
+                </div>
+            </body>    
+        </xmp>
+            </div> 
+        </section>
+
+        <!-- 인트로 공지사항(PC/MO) -->
+        <section id="section02" class="scroll">
+            <h2>인트로 공지사항(PC/MO)</h2>
+            <div class="guide_desc"> 
+                <h3>공지사항 페이지 작업시 작업 순서</h3> 
+                <p>- HTML으로 먼저 퍼블리싱 작업</p>
+                <p>- Admin 실서버 사이트 > 학원관리게시판 > 공지사항에서 작업물 반영</p>
+                <p>- 메모장 등에 한 번 Copy&Paste 한 뒤에, Admin 공지사항에 소스를 붙여 넣는다. (바로 붙여넣을 시, 알 수 없는 태그가 붙는 경우 있음)</p> 
+            </div>
+
+            <h3>공지사항 HTML 작업경로 예시</h3>
+            <ul class="guide_list dis">
+                <li>
+                    <strong>PC</strong> <a href="https://tcampus.megastudy.net/test/notice_240401.html" target="_blank" style="text-decoration: underline;">https://tcampus.megastudy.net/test/notice_240401.html</a>
+                </li> 
+                <li>
+                    <strong>MO</strong> <a href="https://tmcampus.megastudy.net/test/notice_240402.html" target="_blank" style="text-decoration: underline;">https://tmcampus.megastudy.net/test/notice_240402.html</a>
+                </li> 
+                <li>
+                    <strong>PC Admin 반영</strong> <a href="https://campus.megastudy.net/common/notice/notice_view.asp?code=23806" target="_blank" style="text-decoration: underline;">https://campus.megastudy.net/common/notice/notice_view.asp?code=23806</a>
+                </li> 
+                <li>
+                    <strong>MO Admin 반영</strong> <a href="https://mcampus.megastudy.net/common/notice/notice_view.asp?code=23806" target="_blank" style="text-decoration: underline;">https://mcampus.megastudy.net/common/notice/notice_view.asp?code=23806</a>
+                </li> 
+            </ul>
+
+            <h4 class="mt50">HTML 작업 시 : 주석으로 표시 된 영역에서 작업</h4>
+            <div class="guide_code">
+        <xmp class="syntax">
+            <!--------------------------------------------------------------------------------------
+
+                            S : 공지사항 - 메가패스
+
+            ---------------------------------------------------------------------------------------->
+            <style type="text/css"> 
+                .noti_240402 .link_wrap {position: relative;}
+                .noti_240402 .link_wrap .link {position: absolute;font-size:0;}
+                .noti_240402 .link_wrap .link01{right:125px;bottom:161px;width:130px;height:35px;border-radius:20px;} 
+            </style>
+            <div class="noti_240402">
+                <div class="img_wrap">
+                    <img src="https://img.megastudy.net/campus/library/v2015/library/notice/240402/notice_240402_1.jpg" alt="2025 MEGAPASS" />
+                </div>
+            
+                <div class="link_wrap">
+                    <img src="https://img.megastudy.net/campus/library/v2015/library/notice/240402/notice_240402_2.jpg" alt="메가패스 할인 대상" /> 
+                    <a class="link link01" href="https://campus.megastudy.net/campus_common/id_confirm/index.asp" target="_blank">인증하기</a>
+                </div>  
+            </div>
+            <!--------------------------------------------------------------------------------------
+
+                            S : 공지사항 - 메가패스
+
+            ---------------------------------------------------------------------------------------->
+        </xmp>
+            </div>  
+        </section>
+
+        <!-- 학원 메인 페이지 팝업 -->
+        <section id="section03" class="scroll">
+            <h2>학원 메인 페이지(PC/MO) 팝업</h2>
+
+            <h3>PC/MO 작업 위치</h3>
+            <ul class="guide_list dis">
+                <li>
+                    <strong>학원</strong> /nsu/main.asp
+                </li> 
+                <li>
+                    <strong>기숙</strong> /main.asp
+                </li> 
+                <li>
+                    <strong>재학</strong> /jaehak/main.asp
+                </li>  
+            </ul>
+            <!-- <div class="guide_table">
+                <table class="table_style"> 
+                    <colgroup>
+                        <col style="width:7%;">
+                        <col style="width:58%;">  
+                        <col style="width:10%;">
+                        <col style="width:15%;">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>학원</th>
+                            <td class="txtl">gangnam, seocho, gangbuk, noryangjin, sinchon, pyeongchon, bucheon, bundang, ilsan, songpa</td> 
+                            <td>nsu</td>
+                            <td>main.asp</td>
+                        </tr> 
+                        <tr>
+                            <th>기숙</th>
+                            <td class="txtl">yangji, yangjim, ansung</td>  
+                            <td colspan="2">main.asp</td>
+                        </tr> 
+                        <tr>
+                            <th>재학</th>
+                            <td class="txtl">seongbuk</td> 
+                            <td>jaehak</td>
+                            <td>main.asp</td>
+                        </tr> 
+                    </tbody>
+                </table>
+            </div> -->
+
+            <h3>기본 레이어 팝업</h3> 
+            <div class="guide_code">
+        <xmp class="syntax">
+            <style>
+                .layerImgPop {display:block;position:fixed;left:0;right:0;top:0;bottom:0;z-index:9999;}
+                .layerImgPop .popWrap {position:relative; width:100%; height:100%; text-align:center;}
+                .layerImgPop .popWrap::after {display:inline-block; height:100%; vertical-align:middle; content:'';}
+                .layerImgPop .popWrap .inner_popup {display:inline-block; position:relative; z-index:2; width:1030px; height:720px;vertical-align:middle;}
+                .layerImgPop .popWrap .inner_popup a {display:block;}
+                .layerImgPop .popWrap .btn_close {top:34px; right:25px; width:43px; height:43px; text-indent:-9999px; cursor:pointer; z-index:3;}
+                .layerImgPop .popWrap .dim {position:fixed; top:0; left:0; z-index:1; width:100%; height:100%; background:#000; opacity:0.6;}
+        
+                .sr_hide {overflow:hidden;}
+            </style>
+
+            <!-- 240208 레이어 팝업 -->
+            <div id="pop240208" class="layerImgPop">
+                <div class="popWrap">
+                    <div class="inner_popup">
+                        <a href="https://ilsan.megastudy.net/ilsan/nsu/bbs/notice_view.asp?code=24386">
+                            <img src="<%=Application("img_path")%>/library/intro_renew/intro_ilsan/popup_240208.jpg" alt="">
+                        </a>
+                        <span class="btn_close" onclick="javascript:popClose();">닫기</span>
+                    </div>
+                    <div class="dim" onclick="javascript:popClose();"></div>
+                </div>
+            </div>
+            <script>
+                $(document).ready(function(){
+                    if( $('#pop240208').length ){
+                        $("body").addClass("sr_hide");
+                    }
+                });
+
+                function popClose() {
+                    $("#pop240208").fadeOut();
+                    $("body").removeClass("sr_hide");
+                }
+            </script>
+            <!-- //240208 레이어 팝업 -->
+        </xmp>
+            </div>  
+            
+            <h3>PC 영상 플로팅 팝업</h3> 
+            <div class="guide_code">
+        <xmp class="syntax">
+        <!-- S : 영상 플로팅 배너 240110 -->
+        <div class="skyb_box02" id="20240110_mega" 
+                style="position: absolute;left: 50%;margin-left:-320px;top:890px;width:193px;height:196px;z-index:99999;">
+            <div style="skyb_box02_inner">
+                <img src="https://img.megastudy.net/campus/library/v2015/library/noryangjin/banner/ban_fl_nrj_240110.png" 
+                                                                alt="영상으로 만나는 노량진메가스터디" usemap="#20240110_mega" border="0"/>
+                <map name="20240110_mega">
+                    <area shape="circle" coords="171,16,13" href="#" onclick="$('#20240110_mega').hide();return false;" alt="창닫기" onFocus="this.blur();"
+                                            style="display:block;position:absolute;right:10px;bottom:10px;width:20px;height:20px;">
+                    <area shape="circle" coords="98,99,94" href="#" 
+                                            onclick="window.open('http://campus.megastudy.net/campus_common/campus/campus_mov.asp?mCode=U2401090001',
+                                            'popup_vod','width=680,height=420,top=0,left=0');"  
+                                            alt="" onFocus="this.blur();">
+                </map>	
+            </div>
+        </div>
+        </xmp>
+            </div>   
+            <div style="position:relative;width:100%;height:200px;">
+                <div class="skyb_box02" id="20240110_mega" style="position: absolute;left: 25%;margin-left:-320px;top:0px;width:193px;height:196px;z-index:99;">
+                    <div style="skyb_box02_inner">
+                        <img src="https://img.megastudy.net/campus/library/v2015/library/noryangjin/banner/ban_fl_nrj_240110.png" alt="영상으로 만나는 노량진메가스터디" usemap="#20240110_mega" border="0"/>
+                        <map name="20240110_mega">
+                            <area shape="circle" coords="171,16,13" href="#" onclick="$('#20240110_mega').hide();return false;" alt="창닫기" onFocus="this.blur();" style="display:block;position:absolute;right:10px;bottom:10px;width:20px;height:20px;">
+                            <area shape="circle" coords="98,99,94" href="#" onclick="window.open('http://campus.megastudy.net/campus_common/campus/campus_mov.asp?mCode=U2401090001','popup_vod','width=680,height=420,top=0,left=0');" alt="" onFocus="this.blur();">
+                        </map>	
+                    </div>
+                </div>
+            </div> 
+
+            <h3>PC 윈도우 영상 팝업</h3> 
+            <div class="guide_desc">
+                <p>- ex&#41; <a href="https://seongbuks.megastudy.net/seongbuk/jaehak/jaehak/2024/2024_yun06/hi1/yun06_05.asp" target="_blank" style="text-decoration: underline;">https://seongbuks.megastudy.net/seongbuk/jaehak/jaehak/2024/2024_yun06/hi1/yun06_05.asp</a></p> 
+                <p>- ex&#41; <a href="https://noryangjin.megastudy.net/noryangjin/nsu/nsu/2025/2025_jaejung_elective/jaejung_01.asp" target="_blank" style="text-decoration: underline;">https://noryangjin.megastudy.net/noryangjin/nsu/nsu/2025/2025_jaejung_elective/jaejung_01.asp</a></p> 
+            </div>
+            <link rel="stylesheet" type="text/css" href="https://seongbuks.megastudy.net/library/css/css_2024/public_2024yun03.css"> 
+            <link rel="stylesheet" type="text/css" href="https://seongbuks.megastudy.net/library/css/table.css"> 
+ 
+            <style>
+                .shc_area {position:relative;}
+                .shc_area .btn_go {position:absolute; right:50px; bottom:27px; width:165px; height:73px; text-indent:-9999px; z-index:1;}
+                .wide .lec_info_tstyle4 td > p {display:block; margin-left:9px; text-indent:-9px; word-break:keep-all; word-wrap:break-word;}
+                .btn_video.gray {filter: grayscale(1);}
+                .video_box.gray {filter: grayscale(1);}
+                .video_list{ display:flex; gap:0 30px; margin-left: 55px;}
+                .video_list a{ box-sizing:border-box; width:150px;height:56px;line-height:54px;padding:0 15px; text-align: left; background: url('https://img.megastudy.net/campus/library/v2015/library/seongbuk/jaehak/jaehak/2024/2024_yun03/hi1/video_box.png') no-repeat;}
+                .video_list a span{ display:inline-block;}
+            </style>
+            <div class="table_area mt20"> 
+                <table cellspacing="0" cellpadding="0" border="0" class="lec_info_tstyle4">
+                    <caption></caption>
+                    <colgroup>
+                        <col width="120px">
+                        <col width="*">
+                    </colgroup>
+                    <thead>
+                        <tr><th>강사</th> 
+                        <th>영상</th>
+                    </tr></thead>
+                    <tbody>
+                        <tr> 
+                            <td>김아란</td>  
+                            <td>
+                                <div class="video_list">
+                                    <a class="video_box" href="javacsript:void(0);" onclick="window.open('http://campus.megastudy.net/campus_common/campus/campus_mov.asp?mCode=U2403130006','popup_vod','width=680,height=420,top=200,left=100');"><span>성신여고</span></a>
+                                    <a class="video_box" href="javacsript:void(0);" onclick="window.open('http://campus.megastudy.net/campus_common/campus/campus_mov.asp?mCode=U2403130003','popup_vod','width=680,height=420,top=200,left=100');"><span>신일고</span></a>
+                                    <a class="video_box" href="javacsript:void(0);" onclick="window.open('http://campus.megastudy.net/campus_common/campus/campus_mov.asp?mCode=U2403130011','popup_vod','width=680,height=420,top=200,left=100');"><span>창문여고</span></a>
+                                    <a class="video_box" href="javacsript:void(0);" onclick="window.open('http://campus.megastudy.net/campus_common/campus/campus_mov.asp?mCode=U2403130012','popup_vod','width=680,height=420,top=200,left=100');"><span>홍대부고</span></a>
+                                </div>
+                            </td>
+                        </tr> 
+                    </tbody>
+                </table>
+            </div>
+            <div class="guide_code">
+        <xmp class="syntax">
+            <div class="video_list">
+                <a class="video_box" href="javacsript:void(0);" 
+                   onclick="window.open('http://campus.megastudy.net/campus_common/campus/campus_mov.asp?mCode=U2403130006',
+                            'popup_vod','width=680,height=420,top=200,left=100');"><span>성신여고</span>
+                </a>
+            </div>
+        </xmp>
+            </div>   
+        </section>
+
+        <!-- 탭 -->
+        <section id="section04" class="scroll">
+            <h2>탭</h2> 
+
+            <h3>PC 모집안내 탭</h3>
+            <link rel="stylesheet" type="text/css" href="https://yangji.megastudy.net/library/css/css_2025/public_2025_half_pre.css" />
+            <div class="lec_tab" style="position: relative; top: 0px; z-index: 1;">
+                <ul class="col6">
+                    <li><a href="javascript:void(0);" class="on">탭1</a></li>
+                    <li><a href="javascript:void(0);" class="">탭2</a></li>
+                    <li><a href="javascript:void(0);" class="">탭3</a></li>
+                    <li><a href="javascript:void(0);" class="">탭4</a></li>
+                    <li><a href="javascript:void(0);" class="">탭5</a></li>
+                    <li><a href="javascript:void(0);" class="">탭6</a></li> 
+                </ul>
+            </div>  
+
+            <h3>PC 공지사항 페이지 탭</h3>
+            <div class="guide_desc">
+                <p>- ex&#41; https://yangji.megastudy.net/yangji/campus/preparation_01.asp</p> 
+            </div>
+
+            <ul class="normal_tab_box_type_01 mt30">
+                <li class="normal_tab_li tab_curr"><h4><a class="normal_tab" href="javascript:void(0);">탭1</a></h4></li>
+                <li class="normal_tab_li"><h4><a class="normal_tab" href="javascript:void(0);">탭2</a></h4></li>
+                <li class="normal_tab_li"><h4><a class="normal_tab" href="javascript:void(0);">탭3</a></h4></li>
+            </ul>
+            <style>  
+                li.normal_tab_li > h4 {margin: 7px 0 10px !important;}
+            </style>
+
+            <h3>그 외 탭 스타일</h3>  
+            <link rel="stylesheet" type="text/css" href="https://campus.megastudy.net/library/css/teamplay.css" />
+            <div class="team_top_comment mt50">
+                <ul class="team_tab_type_01" style="height: 41px !important;">
+                    <li class="ttt1_curr"><a href="javascript:void(0);">2024</a></li>
+                    <li><a href="javascript:void(0);">2023</a></li>
+                    <li><a href="javascript:void(0);">2022</a></li>
+                    <li><a href="javascript:void(0);">2021</a></li>
+                    <li><a href="javascript:void(0);">2020</a></li>
+                    <li><a href="javascript:void(0);">2019</a></li>
+                    <li><a href="javascript:void(0);">2018</a></li> 
+                </ul> 
+            </div>
+
+            <div class="rolling_slide_wrap">
+                <div class="rolling_left">
+                    <ul class="left_menu">
+                        <li class="active" value="con01_01">면학/학습 관리</li>
+                        <li value="con01_02">우수 강사진</li>
+                        <li value="con01_03">6단계 커리큘럼</li>
+                        <li value="con01_04">학습 콘텐츠</li>
+                        <li value="con01_05">모의고사 콘텐츠</li>
+                    </ul>
+                </div> 
+            </div>   
+        </section>
+
+        <!-- 버튼 --> 
+        <section id="section05" class="scroll">
+            <h2>버튼</h2> 
+
+            <h3>회원가입 Input</h3> 
+            <div class="content joinArea" style="min-height: 300px;">
+                <div class="m_2_box find"> 
+                    <!-- 아이디찾기 -->
+                    <div class="normal_tab_in2 id on"> 
+                        <form name="formId" method="post">
+                        <table cellpadding="0" cellspacing="0" border="0" summary="아이디 찾기" class="member_table_01">
+                            <caption>아이디 찾기</caption>
+                            <colgroup><col width="130px"><col></colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">이름</th>
+                                    <td>
+                                        <label><input name="uName" type="text" style="width:224px;" placeholder="한글만 입력" style="ime-mode:active;" maxlength="10"/></label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">생년월일</th>
+                                    <td>
+                                        <label><input name="uBirth" type="text" style="width:224px;" placeholder="생년월일 8자리 입력(예:20020815)" style="ime-mode:active;" maxlength="8" /></label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">인증</th>
+                                    <td>
+                                        <ul class="cite_tab_box">
+                                            <li class="cite_tab_li tab_curr" id="divIdMobile">
+                                                <label for="id_chk1">
+                                                    <input type="radio" id="id_chk1" name="auth_type" checked="checked" value="S" onclick="javascript:divIdViewType('M');">
+                                                    <span>휴대폰 인증</span>
+                                                </label>
+                                                <div class="cite_box">
+                                                    <p class="cite_txt mt40">회원가입 시 입력하신 휴대폰 번호를 입력해 주세요.</p>
+                                                    <div class="input_area_wrap mt10" style="">
+                                                        <div class="input_area">
+                                                            <input type="text" class="numberonly" name="uMobile" maxlength="13" placeholder="‘-’없이 숫자만 입력">
+                                                            <span class="cite_btn blue findID" onclick="checkFindIdPw(this);">인증번호 발송</span>
+                                                            <p class="info_txt_red" style="display:none;">인증번호 입력시간이 초과하였습니다. </p>
+                                                        </div>
+                                                        <div class="input_area" style="display:none;">
+                                                            <input type="text" name="authNum" class="numberonly" maxlength="6" placeholder="인증번호 입력">
+                                                            <span class="txt on">03:00</span>
+                                                            <span class="cite_btn sky findID" name="layer_cRsvt" onclick="authConfirm(this);">확인</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cite_tab_li" id="divIdEmail">
+                                                <label for="id_chk2">
+                                                    <input type="radio" id="id_chk2" name="auth_type" value="E" onclick="javascript:divIdViewType('I');">
+                                                    <span>이메일 인증</span>
+                                                </label>
+                                                <div class="cite_box">
+                                                    <div class="input_area_wrap mt40" style="">
+                                                        <p class="cite_txt mt40">회원가입 시 입력하신 이메일 주소를 입력해 주세요.</p>
+                                                        <div class="input_area_wrap mt10">
+                                                            <div class="input_area">
+                                                                <input type="text" class="numberonly" name="uEmail" maxlength="40" placeholder="이메일 주소 입력">
+                                                                <span class="cite_btn blue findID" onclick="checkFindIdPw(this);">인증번호 발송</span>
+                                                                <p class="info_txt_red" style="display:none;">인증번호 입력시간이 초과하였습니다. </p>
+                                                            </div>
+                                                            <div class="input_area" style="display:none;">
+                                                                <input type="text" name="authNum" class="numberonly" maxlength="6" placeholder="인증번호 입력">
+                                                                <span class="txt on">03:00</span>
+                                                                <span class="cite_btn sky findID" name="layer_cRsvt" onclick="authConfirm(this);">확인</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </form>
+                    </div>
+                    <!-- //아이디 찾기 --> 
+                </div>
+            </div>
+
+            <h3>약관 관련 버튼</h3> 
+            <div class="content joinArea" style="min-height: 300px;width:788px;"> 
+                <form name="form1" method="post" action="<%=join_form%>">
+                <input type="hidden" id="jungBo3" name="jungBo3" value="">
+                <!--isms 결함조치 관련 작업 중 가입 순서 변경으로 인해 기존 파라미터 제외 2024-01-25 sook-->	
+                    <h4 class="mt40">약관동의</h4>
+                    <div class="mt20">
+                    </div>
+                    <div class="check_agree_wrap">
+                        <div class="all_agree">
+                            <input type="checkbox" id="all_agree" name="all_agree" class="chk_box"/>
+                            <label for="all_agree"><span>전체 동의</span></label>
+                        </div>
+        
+                        <ul class="check_list">
+                            <li>
+                                <span class="input_checkbox agree">
+                                    <input type="checkbox" id="agree" name="agree" class="chk_box_s" value="Y"/>
+                                    <label for="agree" class="chk-label">메가스터디학원 이용약관<span class="tblue">(필수)</span></label>
+                                </span>
+                                <a data-name="terms_con1" href="#"></a>
+                            </li>
+                            <li>
+                                <span class="input_checkbox agree">
+                                    <input type="checkbox" id="agree2" name="agree2" class="chk_box_s" value="Y"/>
+                                    <label for="agree2" class="chk-label">개인정보 필수항목에 대한 처리 및 이용<span class="tblue">(필수)</span></label>
+                                </span>
+                                <a data-name="terms_con2" href="#"></a>
+                            </li>
+                            <li>
+                                <span class="input_checkbox agree">
+                                    <input type="checkbox" id="agree3" name="agree3" class="chk_box_s" value="Y"/>
+                                    <label for="agree3" class="chk-label">개인정보 선택항목에 대한 처리 및 이용<span class="tgray">(선택)</span></label>
+                                </span>
+                                <a data-name="terms_con3" href="#"></a>
+                            </li>
+                            <li>
+                                <span class="input_checkbox agree">
+                                    <input type="checkbox" id="agree4" name="agree4" class="chk_box_s" value="Y"/>
+                                    <label for="agree4" class="chk-label">마케팅 활용 및 광고성 정보 수신 동의<span class="tgray">(선택)</span></label>
+                                </span>
+                                <a data-name="terms_con4" href="#"></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="agree_info_txt mt20">회원가입 시 위 동의 항목들에 대하여 동의를 거부할 수 있으나 회원가입 및 제공되는 서비스 이용이 제한될 수 있습니다.</p>
+                    <div class="btnDiv mt30" style="text-align: center;">
+                        <a href="javascript:checkFrm();" class="btn_round dark_arrow"><span>확&nbsp;인</span></a>
+                    </div>
+                </form>
+            </div>   
+        </section>
+    </div>
+</div>
+</body> 
+</html>

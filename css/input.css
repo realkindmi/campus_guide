@@ -1,0 +1,563 @@
+body { font-family: 'Noto Sans KR','Malgun Gothic', sans-serif;font-size: 14px;}
+#header{position:fixed !important;}    
+/* ¾à°ü check box */
+.chk_box, .chk_box_s {display:none;}
+.chk_box + label , .chk_box_s + label {display:inline-block; cursor:pointer; color:#000;}
+.chk_box + label {
+	padding-left:36px;
+	line-height:27px;
+	font-size:22px;
+	background:url('https://img.megastudy.net/campus/library/v2015/library/common/agree_check_off.png') no-repeat 0;
+	background-size:28px 27px;
+}
+.chk_box:checked + label {
+	font-weight:bold;
+	background:url('https://img.megastudy.net/campus/library/v2015/library/common/agree_check_on.png') no-repeat  0;
+	background-size:28px 27px;
+}
+
+.chk_box_s + label {
+	padding-left:28px;
+	line-height:23px;
+	font-size:16px;
+	color:#000;
+	background:url('https://img.megastudy.net/campus/library/v2015/library/common/agree_check_s_off.png') no-repeat  0;
+	background-size:21px 22px;
+}
+.chk_box_s:checked + label {
+	background:url('https://img.megastudy.net/campus/library/v2015/library/common/agree_check_s_on.png') no-repeat 0;
+	background-size:21px 22px;
+}
+
+.tblue {color:#0376f0;}
+.tgray {color:#bbb;}
+
+.check_agree_wrap {padding-bottom:30px; border-bottom:1px solid #E5E7EA;}
+.all_agree {padding:22px 10px; border-top:1px solid #68707D;}
+.check_list {margin:0 10px; border-top:1px solid #E5E7EA;}
+.check_list li {position:relative; padding:30px 20px 0;}
+.check_list li > a {display:block; position:absolute; bottom:5px; right:20px; width:7px; height:12px; background:url('https://img.megastudy.net/campus/library/v2015/library/common/agree_icon_arrow.png') 0 no-repeat; background-size:100%;}
+
+.agree_info_txt {padding:0 25px; font-size:14px; color:#888; letter-spacing:-0.5px;}
+ 
+
+
+/* ·Î±×ÀÎ */
+.loginWrap{ width:788px; margin:0 auto; padding:46px 0 50px;}
+.loginWrap .title{overflow:hidden; border-bottom:3px solid #3b4048; padding-bottom:17px;}
+.loginWrap .title h2{float:left; font-size:30px; margin-right:13px;}
+.loginWrap .title p{float:left; margin-top:20px; color:#555; font-size:15px;}
+.login_box{padding:60px 0 70px; width:390px; margin:0 auto;}
+.loginBanner{border-bottom:1px solid #3b4048; padding-bottom:20px;}
+.login_input_box{position:relative; width:100%;}
+.login_input_box .login_btn{position:absolute; top:0; right:0; width:110px; height:91px; color:#fff; font-weight:bold; font-size:15px; text-align:center; line-height:91px; background:#424c5d;}
+.login_input_box .login_input{width:242px; height:18px; padding:10px  13px; font-size:15px; color:#222; border:1px solid #999; margin-bottom:11px;}
+.login_input_box label{position:absolute; top:10px; left:15px; z-index:1; font-size:15px; color:#222;}
+.btn_log{display:inline-block; text-align:center; font-size:15px; line-height:34px; width:188px; height:36px; border:1px solid #949ba7;}
+.btn_log.join{color:#222; background:#f6f6f6; margin-right:5px;}
+.btn_log.find{color:#fff; background:#949ba7}
+
+ 
+/**** membersÆäÀÌÁö ****/
+/* °øÅë Æû ¿ä¼Ò */
+input[type="radio"],input[type="checkbox"]{border:0; box-sizing: border-box; margin:0 1px 0 0; vertical-align:top;}
+input[type="text"],input[type="password"]{border:1px solid #dcdcdc; height:20px; padding:2px; font-size:14px;}
+input[type="tex2"],input[type="number"]{border:1px solid #dcdcdc; line-height:60px; font-size:60px;}
+select{border:1px solid #dcdcdc; height:26px; line-height:26px; padding:2px 2px 4px; padding:2px\9; padding:2px 2px 4px;vertical-align:top; font-size:14px;}
+.ie select{ line-height:26px;}/*ie*/
+@-moz-document url-prefix()/*ff*/{
+	select{padding:0px 2px 3px}
+}
+select::-ms-expand {border:0; background:#fff; padding:3px 2px 2px;}
+.myPage input[type="text"], .myPage input[type="password"]{padding:0px; text-align:center;}
+
+/* °¡ÀÔ´Ü°è */
+.member_step{background:#eceef2; width:788px;}
+.member_step ol{overflow:hidden; width:793px; height:75px;}/*width:788px;*/
+.member_step li{float:left; padding:10px 29px 10px 0; height:55px;color:#949ba7;  font-weight:bold; font-size:17px; letter-spacing:-1px; margin-left:-1px}
+.member_step li .txt{padding:7px 0; border-left:1px solid #cbd0db; padding-left:29px;}
+.member_step div span{display:block; font-size:13px; font-weight:normal; letter-spacing:0}
+/*ie8 hack*/@media \0screen {.member_step_05 {padding:20px 29px 20px 29px !important;}}
+/*ie7 hack*/.member_step_05	{padding: 20px 29px 20px 29px !important; white-space:nowrap}
+.member_step li.member_step_curr{background:#424c5d; color:#fff; position:relative;}
+.member_step li.member_step_curr .txt{border-left:1px solid #424c5d;}
+
+/* °¡ÀÔ¾È³»¹Ú½º ¹× ¹®±¸ */
+.joinGuide{border:1px solid #dcdcdc; padding:18px 19px; background:url("https://img.megastudy.net/campus/library/v2015/library/common/logo_megastudy.png") no-repeat right 50%}
+.joinGuide p{line-height:20px;}
+.joinGuide p strong{color:#366cc6; font-weight:normal;}
+.joinGuide p input{vertical-align:middle;}
+.member_tip{overflow:hidden;}
+.member_tip li{line-height:22px; background:url("https://img.megastudy.net/campus/library/v2015/library/common/icon/bl_list.gif") no-repeat 0 11px; padding-left:8px;}
+
+/* idpw Ã£±â ¾È³»*/
+.customerBox{background:#f6f6f6; padding:26px 32px 24px; color:#444;}
+.customerBox ul{background:url("https://img.megastudy.net/campus/library/v2015/library/common/bg/bg_line.png") 0 bottom repeat-x; padding-bottom:17px;}
+.customerBox ul li{line-height:18px; margin-bottom:7px; background:url("https://img.megastudy.net/campus/library/v2015/library/common/icon/bl_list.gif") no-repeat 0 9px; padding-left:8px;}
+.customerBox .phone{overflow:hidden; margin-top:21px;}
+.customerBox .phone strong{float:left; margin-left:51px;}
+.customerBox .phone .txt{float:left; border-left:1px solid #a0a3a7; padding-left:34px; margin-left:39px; line-height:22px;}
+.customerBox .phone .txt em{font-size:15px; font-weight:bold; display:block; margin-top:-2px;}
+/*°³ÀÎÁ¤º¸¼öÁ¤*/
+.customerBox.bLine{text-align:center; border-top:2px solid #7f8692; border-bottom:1px solid #dcdcdc; padding:38px 0px 42px;}
+.customerBox.bLine .inputArea label{line-height:22px;}
+.customerBox.bLine .inputArea input{width:224px; border:1px solid #888}
+.customerBox.bLine .inputArea .btn_pop_srch{vertical-align:top;}
+
+/* °¡ÀÔ¾ç½Ä Æû */
+.member_table_01{border-bottom:1px solid #dcdcdc; border-top:2px solid #888; width:100%}
+.member_table_01.bLine{border-bottom:1px solid #888;}
+.member_table_01 caption	{display:none}
+.member_table_01 th	{background:#f6f6f6; padding:12px 20px; text-align:left;border-top:1px solid #ccc; vertical-align:middle; white-space:nowrap;font-weight:normal;}
+.member_table_01 th.p_tit{padding:12px 20px 12px 80px; font-weight:normal; white-space:nowrap;}
+.member_table_01 td	{padding:12px 19px; border-top:1px solid #dcdcdc}
+.member_table_01 td label	{display:inline-block; line-height:19px; padding-right:10px;}
+.member_table_01 td label.p0{padding:0;}
+.member_table_01 td input[type="text"],.member_table_01 td input[type="password"], .member_table_01 td select{border:1px solid #dcdcdc;}
+.member_table_01 td input[type="radio"]{margin:4px 1px 0 0;}
+.member_table_01 td.inputs{vertical-align:middle;}
+.member_table_01 td .fileGuide{font-size:12px;}
+.member_table_01 td.content_view{width:749px; padding:0;}
+.member_table_01 td.content_view .viewArea{padding:30px 20px;}
+.member_table_01 td.content_view .viewArea .board_write_area{width:726px; padding:10px; min-height:200px; border:1px solid #dcdcdc}
+.select_y{width:67px;}
+.select_m{width:58px;}
+.select_d{width:58px;}
+.member_table_01.type_pop{table-layout:fixed;}
+.member_table_01.type_pop th{white-space:nowrap; padding:10px 15px;}
+.member_table_01.type_pop td{padding:10px 10px;}
+
+.member_table_02{border-bottom:1px solid #dcdcdc; border-top:2px solid #888; width:100%}
+.member_table_02.bLine{border-bottom:1px solid #888;}
+.member_table_02 caption	{display:none}
+.member_table_02 th	{background:#f6f6f6; padding:12px 20px; text-align:center;border-top:1px solid #ccc; vertical-align:middle; white-space:nowrap;font-weight:normal;}
+.member_table_02 th.p_tit{padding:12px 20px 12px 80px; font-weight:normal; white-space:nowrap;}
+.member_table_02 td	{padding:12px 19px; border-top:1px solid #dcdcdc; text-align:center;}
+.member_table_02 td label	{display:inline-block; line-height:19px; padding-right:10px;}
+.member_table_02 td label.p0{padding:0;}
+.member_table_02 td input[type="text"],.member_table_01 td input[type="password"], .member_table_01 td select{border:1px solid #dcdcdc;}
+.member_table_02 td input[type="radio"]{margin:4px 1px 0 0;}
+.member_table_02 td.inputs{vertical-align:middle;}
+.member_table_02 td .fileGuide{font-size:12px;}
+.member_table_02 td.content_view{width:749px; padding:0;}
+.member_table_02 td.content_view .viewArea{padding:30px 20px;}
+.member_table_02 td.content_view .viewArea .board_write_area{width:726px; padding:10px; min-height:200px; border:1px solid #dcdcdc}
+
+.member_table_02.type_pop{table-layout:fixed;}
+.member_table_02.type_pop th{white-space:nowrap; padding:10px 15px;}
+.member_table_02.type_pop td{padding:10px 10px;}
+
+/* Å¸ÀÌÆ² */
+.content.joinArea h4{font-size:22px; font-weight:bold; border-left:3px solid #424c5d; padding-left:9px; height:20px; line-height:14px;}
+.content.joinArea h4.top{padding-top:11px;}
+.content.joinArea h5{font-size:17px; font-weight:bold; color:#444; background:url("https://img.megastudy.net/campus/library/v2015/library/common/icon/bl_tit.gif") no-repeat 0 9px; padding-left:15px;}
+.content .p_tit{margin-top:-9px;}
+.consult_sub{font-size:22px; font-weight:bold; border-left:3px solid #424c5d; padding-left:9px; height:20px; line-height:14px;}
+.consult_txt {float:left; color:#555; font-size:15px; letter-spacing:-0.25px; padding-left:10px;}
+
+/* ÅÇ */
+.normal_tab_box_type_01{padding:0 0 0 1px;height:47px; border-bottom:1px solid #68707d; position:relative;}
+.normal_tab_box_type_01:after{clear:both; display:block; content:''; zoom:1;}
+.normal_tab_box_type_02{padding:0 0 0 1px; height:68px; border-bottom:1px solid #68707d; position:relative;}	/* ï¿½ß°ï¿½ */
+.normal_tab_box_type_02:after{clear:both; display:block; content:''; zoom:1;}	/* ï¿½ß°ï¿½ */
+
+/* 240229 */
+.myPage .normal_tab_box_type_02.mt25 li {border-bottom:1px solid #f6f6f6;}
+.myPage .normal_tab_box_type_02.mt25 li .normal_tab3 {padding: 13px 4px 12px 4px; width:91px;}
+/* 240229 */
+
+.normal_tab_li{float:left; border:1px solid #dcdcdc;margin-left:-1px; background:#f6f6f6;border-bottom: 1px solid #68707d;}
+.normal_tab_li2{float:left; border:1px solid #dcdcdc; border-bottom:none;margin-left:-1px; background:#f6f6f6; height:64px;}
+.normal_tab,.normal_tab2{display:inline-block; cursor:pointer; padding:13px 14px 13px 14px; font-size:15px; height:20px;}
+.normal_tab3{display:inline-block; cursor:pointer; padding:13px 14px 13px 14px; font-size:14px; height:40px; width:71px; text-align:center;}	/* ï¿½ß°ï¿½ */
+.normal_tab_0125,.normal_tab2{display:inline-block; cursor:pointer; padding:13px 14px 13px 14px; font-size:15px; height:20px;}
+.tab_curr{margin-top: -2px;border:1px solid #68707d !important; border-top:3px solid #68707d !important; border-bottom:1px solid #fff !important; background:#fff !important;margin-right:1px}
+.normal_tab_li.tab_curr .normal_tab_0125 {padding:12px 14px 13px 14px;}
+.tab_curr>.normal_tab,.tab_curr>.normal_tab2{padding:12px 14px 12px 14px !important;color:#222 !important; letter-spacing:-0.50px; }
+.tab_curr1{border:2px solid #08dfaa !important; border-bottom:none !important; background:#fff !important;margin-right:1px}
+.tab_curr1 .normal_tab{padding:14px 20px 10px 20px !important;color:#31aa94 !important}
+.tab_curr1 .normal_tab2{padding:14px 20px 10px 20px !important;color:#31aa94 !important}	
+.tab_curr2{float:left;border:2px solid #4a68ba !important; border-bottom:none !important; background:#fff !important;margin-right:1px}
+.tab_curr2 .normal_tab{display:inline-block; padding:14px 20px 10px 20px !important;color:#4a68ba !important}
+.tab_curr2 .normal_tab2{display:inline-block; padding:14px 20px 10px 20px !important; color:#4a68ba !important}
+.tab_curr3{border:1px solid #68707d !important; border-top:3px solid #68707d !important; border-bottom:none !important; background:#fff !important;margin-right:1px; height:63px;}
+.tab_curr3>.normal_tab,.tab_curr>.normal_tab2{padding:11px 35px 14px 35px !important;color:#222 !important; letter-spacing:-0.50px; }
+.normal_tab_in{display:none; position:absolute; top:80px; left:0; width:802px;overflow-x:hidden}
+
+/* [¾÷¹« ¿äÃ»] °øÅë_´Ü°ú ÆäÀÌÁö ÀÏºÎ ¿µ¿ª ³Êºñ°ª Á¶Á¤ ¿äÃ» 20240422 */
+.content.danka .normal_tab_box_type_01 .normal_tab_in{ width:100% !important;}
+
+.normal_tab_in.top97{top:97px;}
+.normal_tab_in2{display:none; position:absolute; top:117px; left:0; width:100%;overflow-x:hidden}
+.normal_tab_in3{display:none; position:absolute; top:46px; left:0; width:100%;overflow-x:hidden}
+.tab_curr .normal_tab_in{display:block !important; overflow:visible;}
+.tab_curr .normal_tab_in2{display:block !important;}
+.tab_curr .normal_tab_in3{display:block !important;}
+/* ÆË¾÷innerÅÇ */
+.normal_tab_box_type_sub{padding:13px 0 0 1px; height:34px; position:relative}
+.normal_tab_li_sub{float:left; border:1px solid #d9d9d9; margin-left:-1px; background:#fafafa; }
+.normal_tab_sub{ padding:8px 25px 9px 25px; cursor:pointer; font-size:13px; font-weight:700; display:inline-block}
+.tab_curr_sub{border:none !important; background:url("https://img.megastudy.net/campus/library/v2015/library/common/bg/bg_in_tab.png") no-repeat center bottom !important;margin-right:1px}
+.tab_curr_sub .normal_tab_sub	{padding-bottom:20px;color:#fff !important}
+.normal_tab_in_sub{display:block; width:788px;}
+.m_2_box{height:450px}
+.m_2_box2{height:595px}
+/* ÆË¾÷ ÅÇÀÏ¶§ */
+.normal_tab_box_type_01.type_pop{padding:0 0 0 1px; height:39px; border-bottom:1px solid #68707d; position:relative}
+.normal_tab_box_type_01.type_pop .normal_tab_li{float:left; border:1px solid #dcdcdc; border-bottom:none;margin-left:-1px; background:#f6f6f6}
+.normal_tab_box_type_01.type_pop .normal_tab{display:inline-block; cursor:pointer; padding:11px 20px 10px 20px !important;font-size:13px;}
+.normal_tab_box_type_01.type_pop .tab_curr{border:1px solid #68707d !important; border-top:3px solid #68707d !important; border-bottom:none !important; background:#fff !important;margin-right:1px; }
+.normal_tab_box_type_01.type_pop .tab_curr .normal_tab{padding:9px 20px 11px 20px !important;}
+.normal_tab_box_type_01.type_pop .normal_tab,.normal_tab_box_type_01.type_pop .normal_tab2{height:17px;}
+/* ¸¶ÀÌÆäÀÌÁö ÆÀÇÃ·¹ÀÌ ÅÇ */
+.normal_tab_box_type_01.team .normal_tab_in{overflow-x:visible;}
+
+/* °¡ÀÔ¿Ï·á ÄÁÅÙÃ÷ */
+.mem_completeBox{background:url("https://img.megastudy.net/campus/library/v2015/library/common/bg/bg_join_complt.png") no-repeat center top; padding-top:141px;}
+.mem_completeBox p{font-size:17px; line-height:27px; margin-bottom:22px;}
+.mem_completeBox .btns a{margin:0 3px;}
+.txtArrowBox{background:url("https://img.megastudy.net/campus/library/v2015/library/common/bg/bg_arrowBox.png") center bottom no-repeat; padding-bottom:27px;}
+.txtArrowBox .txtDiv{background:#f6f6f6; padding:21px 0 20px; text-align:center; line-height:25px; color:#424c5d;}
+.txtArrowBox .txtDiv h4{font-size:22px; margin-bottom:4px;}
+.serviceBox{padding:0 30px; overflow:hidden;}
+.serviceBox .slist{width:335px;}
+.serviceBox .slist h5{font-size:22px; text-align:center; background:url("https://img.megastudy.net/campus/library/v2015/library/common/bg/bg_service_top.gif") center bottom no-repeat; padding-bottom:33px;}
+.serviceBox .slist ul{padding-left:47px; margin-top:13px;}
+.serviceBox .slist ul li{line-height:25px; letter-spacing:-1px; background: url("https://img.megastudy.net/campus/library/v2015/library/common/icon/bl_list.gif") no-repeat 0 12px; padding-left:10px;}
+.serviceBox .slist.fr ul{padding-left:27px;}
+.serviceBox_n{overflow:hidden;}
+.serviceBox_n .slist{width:750px;}
+.serviceBox_n .slist h5{font-size:22px; text-align:center; background:url("https://img.megastudy.net/campus/library/v2015/library/common/bg/bg_service_top_n.gif") center bottom no-repeat; padding-bottom:33px;}
+
+/* °³ÀÎÁ¤º¸Ã³¸®,ÀÌ¿ë¾à°ü */
+.txtLine{line-height:18px;}
+.termsBox{border-top:2px solid #777; border-bottom:1px solid #777; background:#f9f9f9; padding:25px;}
+.pre_div{font-size:12px; line-height:130%; margin:0;}
+
+/* ¾à°ü ÅØ½ºÆ® ¹Ú½º */
+.pre_join {background: #f9f9f9; padding:15px; margin:0; font-size:12px;}
+.btn_box_type_01 {padding: 10px 0 10px 0; text-align: right;}
+.btn_box_type_01 label input {vertical-align: middle;}
+.m_step_02_box{border-top:1px solid #68707d; border-bottom:1px solid #dcdcdc; height:140px; overflow:hidden; overflow-y:scroll; padding:10px;}
+.m_step_02_box_n	{border-bottom:1px solid #ccc; height:130px; overflow-y:scroll; padding:10px;}
+.m_step_02_box pre{font-size:12px; line-height:130%}
+.m_step_02_box_member{border-top:2px solid #777; border-bottom:1px solid #777; padding:10px; height:350px; overflow-y:scroll;}
+.m_step_02_box_member pre{font-size:12px; line-height:130%}
+.m_step_03_tip{ line-height:20px; margin:34px 0 21px;}
+
+/* ÀÎÁõÅÇ ³»¿ë */
+.m_1_03_tab_01_bottom{background:#f6f6f6; padding:20px 20px; line-height:22px}
+.m_1_03_tab_01{font-size:15px; text-align:center; padding:150px 0 0 0; background:url("https://img.megastudy.net/campus/library/v2015/library/common/bg/bg_ipin.png") no-repeat center top;}
+.ipin_guideBox{padding:18px 36px 18px 100px;; border-top:2px solid #68707d; border-bottom:1px solid #68707d; line-height:22px; background:url("https://img.megastudy.net/campus/library/v2015/library/common/icon/ico_quest_ipin.png") no-repeat 36px 18px;}
+.ipin_guideBox strong{color:#222; font-size:15px;}
+
+/* ¾ÆÀÌµðºñ¹ø Ã£±â */
+.member_idpw{border-top:2px solid #7f8692; border-bottom:1px solid #7f8692; padding:20px; background:url("https://img.megastudy.net/campus/library/v2015/library/common/bg/bg_idpw_ipin.png") no-repeat right bottom;}
+.member_idpw_send{display:inline-block;}
+.member_idpw_send .txtDiv{position:relative; overflow:hidden; text-align:left; height:26px; padding-right:140px;}
+.member_idpw_send .txtDiv>span{display:inline-block; min-width:95px; font-size:15px; vertical-align:middle;}
+.member_idpw_send .txtDiv strong{display:inline-block; font-weight:normal; min-width:220px; color:#366cc6; font-size:19px; font-family:verdana; vertical-align:top;}
+.member_idpw_send .txtDiv button{vertical-align:top; position:absolute; top:0; right:0;}
+.member_idpw_send .txtDiv.line{border-bottom:1px solid #d8d8d8; padding-bottom:14px; margin-bottom:14px;}
+
+/* °³ÀÎÁ¤º¸ÀÔ·ÂÅ×ÀÌºí */
+.table_title:after{clear:both; display:block; content:''; zoom:1;}
+.table_title span img{vertical-align:middle; padding:0 3px;}
+.table_type_01{width:100%; border-top:2px solid #888; border-bottom:1px solid #888}
+.table_type_01.nowrap th{white-space:nowrap;}
+/*ie10*/.ie .table_type_01.scholar{border-collapse:separate;}
+.table_type_01.fix{table-layout:fixed}
+.table_type_01 thead th{text-align:center; font-weight:normal; padding:10px 0 12px 0;}
+.table_type_01 thead tr:first-child th{border-top:0;}
+.table_type_01 th{background:#f6f6f6; text-align:left; vertical-align:middle; font-weight:normal; border-top:1px solid #ccc; font-size:13px; padding:10px 10px 13px 15px}
+.table_type_01 th span.req{background:url("https://img.megastudy.net/campus/library/v2015/library/common/icon/bl_list.gif") no-repeat 0 7px; padding-left:10px;}
+.table_type_01 td{text-align:left; border-top:1px solid #d7d7d7; padding:12px 10px 12px 10px; font-size:12px}
+.table_type_01 input{height:18px; font-size:12px; vertical-align:middle;}
+.table_type_01 select{height:22px; border:1px solid #c8cacc; font-size:12px; vertical-align:middle; padding:0px 2px 3px; padding:1px\9}
+.table_type_01 label{display:inline-block; vertical-align:middle;}
+.table_type_01 .warn{font-size:12px; line-height:17px;}
+.table_type_01 .warn.mt5{margin-top:3px;}
+.table_type_01 .width_136{width:134px;}
+.table_type_01 .width_368{width:368px;}
+.table_type_01 .width_320{width:320px;}
+.table_type_01 .width_29{width:29px;}
+.table_type_01 .width_40{width:38px;}
+.table_type_01 .space{padding-right:15px;}
+.table_type_01.photo td.br_1{vertical-align:middle;}
+/**/
+.table_type_01.type2 {border-collapse:separate;}
+.table_type_01.type2>tbody td,.table_type_01.type2>tfoot td{text-align:center; vertical-align:middle; padding:12px 5px 12px 5px;}
+.table_type_01.type2>tbody td.taL{padding:12px 10px;}
+.table_type_01.type2>tbody td.fileUpload{text-align:left; padding:9px 10px 7px;}
+.table_type_01.type2 .selectLine th,
+.table_type_01.type2 .inputLine td,
+.table_type_01.type2 .inputCell{padding:9px 5px;}
+.table_type_01.type2 thead th a{text-decoration:underline;}
+.table_type_01.type2 td .width_87{width:83px;}
+.table_type_01.type2 td .width_100{width:99px;}
+.table_type_01.type2 td input[type="text"]{height:20px; border:1px solid #d7d7d7;}
+.table_type_01.type2 tbody th.bg{background:#fff;}
+.table_type_01.type2 .pointCell{background:#eaeff7; font-weight:bold;}
+.table_type_01.type2 th.pointCell{font-weight:normal; text-align:center} /*2016-11-01 ï¿½ß°ï¿½*/
+.table_type_01.type2 select{height:26px; border:1px solid #909090;}
+.table_type_01.type2 select:disabled {background:rgb(235, 235, 228);}
+.table_type_01.type2 .selectLine th select,
+.table_type_01.type2 select.w89{width:89px;}
+.table_type_01.type2 select.w83{width:83px;}
+.table_type_01.type2 .selectLine select.w_100,
+.table_type_01.type2 td input.w_100 {width:100%;height:30px;box-sizing:border-box;}
+.table_type_01.type2 td input.w_100 {padding:2px 5px;}
+.table_type_01.type2 input.w40{width:41px;}
+.table_type_01.type2 td .btn_dn2{margin-top:-1px;}
+.table_type_01.type2 td .ico_arw{vertical-align:top; margin:3px 5px 0 0;}
+.table_type_01.type2 tfoot td{background:#eaeff7;}
+.table_type_01.type2 tr.hLine td{line-height:18px; font-size:13px;}
+.table_type_01.type2 td.hLine{line-height:22px; font-size:13px;}
+.timetable tr td.br_1,.timetable tr th.br_1{border-left:1px solid #d7d7d7; border-right:0;}
+.timetable tr td:last-child,.timetable tr th:last-child{border-left:1px solid #d7d7d7;}
+.timetable tr td.br_1:first-child,.timetable tr th.br_1:first-child{border-left:0;}
+/**/
+.table_type_03{width:100%; border-top:2px solid #888; border-bottom:1px solid #d7d7d7}
+.table_type_03 th{font-weight:700; border-bottom:1px solid #888 !important; background:#fbfbfb; font-size:14px; padding:8px 10px 12px 10px; text-align:center;}
+.table_type_03 td{text-align:center; border-top:1px solid #d7d7d7; padding:8px 10px 8px 10px; }/*font-size:12px*/
+.table_type_03 a:visited {color:#666666}
+.table_type_03 a {color:#666666}
+.table_type_03.pop th{font-size:13px; white-space:nowrap; padding:8px 10px 12px 10px;}
+/* Å×ÀÌºí inner tab */
+.m_tab_type_01{margin:0 0 6px 0px;  border-left:1px solid #dcdcdc; height:34px;}
+.m_tab_type_01 li{float:left; border-right:1px solid #dcdcdc; border-top:1px solid #dcdcdc; border-left:0; background:#f6f6f6; margin-left:0px;}
+.m_tab_type_01 li a{position:relative; display:block; height:32px; border-bottom:1px solid #888; line-height:30px; color:#999; text-align:center; margin-left:-1px;}
+.m_tab_type_01 li.m_tab_type_01_curr{background:#fff; margin-left:-1px;}
+.m_tab_type_01 li.m_tab_type_01_curr a{color:#333 !important; z-index:1; margin:-1px; border:1px solid #888;  border-bottom:1px solid #fff;}
+/*.m_tab_type_01{width:299px;height:25px; border:1px solid #59667c;  border-right:none; background:url("https://img.megastudy.net/campus/library/v2015/library/common/bg/bg_tab_space.png") repeat-y right 0 #ededed; margin-bottom:13px}
+.m_tab_type_01 li{float:left; height:25px; border-right:1px solid #59667c}
+.m_tab_type_01 li a{padding:2px 0px 3px 0px; height:32px; font-size:13px; font-weight:700; color:#3a3d48;; display:block; letter-spacing:-1px; text-align:center}
+.m_tab_type_01_curr a{color:#fff !important; padding:2px 0px 0px 0px !important; background:url("https://img.megastudy.net/campus/library/v2015/library/common/bg/bg_in_tab.png") no-repeat center bottom; color:#fff; font-weight:700}*/
+.table_type_02_report {border:1px solid #ccc; text-align:center; width:700px; margin:0 auto; padding:30px 30px; background:url("https://img.megastudy.net/campus/library/v2015/library/common/print_report_bg.jpg") no-repeat 0 7px; }
+.table_type_02{width:100%; border-top:2px solid #888; border-bottom:1px solid #888; }
+.table_type_02.nowrap th{white-space:nowrap;}
+/*ie10*/.ie .table_type_02.scholar{border-collapse:separate;}
+.table_type_02.fix{table-layout:fixed}
+.table_type_02 thead th{text-align:center; font-weight:normal; padding:10px 0 12px 0;}
+.table_type_02 thead tr:first-child th{border-top:0;}
+.table_type_02 th{background:#f6f6f6; text-align:center; vertical-align:middle; font-weight:normal; border:1px solid #ccc; font-size:13px; padding:10px 10px 13px 15px}
+.table_type_02 th span.req{background:url("https://img.megastudy.net/campus/library/v2015/library/common/icon/bl_list.gif") no-repeat 0 7px; padding-left:10px;}
+.table_type_02 td{text-align:center; border:1px solid #ccc; padding:12px 10px 12px 10px; font-size:12px}
+.table_type_02 input{height:18px; font-size:12px; vertical-align:middle;}
+.table_type_02 select{height:22px; border:1px solid #c8cacc; font-size:12px; vertical-align:middle; padding:0px 2px 3px; padding:1px\9}
+.table_type_02 label{display:inline-block; vertical-align:middle;}
+.table_type_02 .warn{font-size:12px; line-height:17px;}
+.table_type_02 .warn.mt5{margin-top:3px;}
+.table_type_02 .width_136{width:134px;}
+.table_type_02 .width_368{width:368px;}
+.table_type_02 .width_320{width:320px;}
+.table_type_02 .width_29{width:29px;}
+.table_type_02 .width_40{width:38px;}
+.table_type_02 .width_100p  {width:100%;}
+.table_type_02 .space{padding-right:15px;}
+.table_type_02.photo td.br_1{vertical-align:middle;}
+.table_type_02 .brn{ border-right:none !important;}
+.table_type_02 .bln{ border-left:none !important;}
+/* 2016-11-01 Ãß°¡ */
+.tableWrap{width:796px; overflow:hidden; margin-left:-8px;}
+.tableWrap .box.fl{width:257px; margin-left:8px;}
+/*.tableWrap .box:first-child{margin-left:0;}*/
+.box table td,.box table th{font-size:11px;}
+.box .table_type_01.type2 tfoot .total td{background:none;}
+.box .table_type_01 th{padding:10px 0 13px 0;}
+.box .table_type_01 tbody th,.box .table_type_01 tbody td{height:40px; padding:0;}
+/* // 2016-11-01 Ãß°¡ */
+ 
+/**** ¸¶ÀÌÆäÀÌÁö ****/
+/* index */
+.myInfoBox{ background:#68707d; padding:0 5px 5px;}
+.content.myPage .myInfoBox{padding:0 5px 0;}
+.myInfoBox.bg{background:#68707d url("https://img.megastudy.net/campus/library/v2015/library/common/bg/bg_infobox.gif") repeat;}
+.myInfoBox .top_info{position:relative; height:25px; overflow:visible; padding:18px 27px 17px; }
+.myInfoBox .top_info .txt_notice{color:#fff; font-size:19px; height:26px; line-height:22px; letter-spacing:-0.25px; padding-left:38px; background:url("https://img.megastudy.net/campus/library/v2015/library/common/icon/ico_content.png") no-repeat 0 -400px;}
+.infoView{padding:20px 25px; overflow:hidden; background:#fff;}
+.infoView.bg{background:#fff url("https://img.megastudy.net/campus/library/v2015/library/common/bg/bg_infobox_page.gif") no-repeat right top;}
+
+.viewBox.fl,.viewBox.fr{width:355px;}
+.viewBox .top{position:relative; height:25px; overflow:hidden;}
+.viewBox .top h4{color:#424c5d; font-size:15px; font-weight:normal;}
+.viewBox .top .p2{position:absolute; top:0px; right:0px;}
+.viewBox .top select{height:24px; padding:1px 2px 3px; padding:1px\9; font-size:12px;}
+.myInfoBox .top_info .p1{position:absolute; top:16px; right:25px;}
+.myInfoBox .top_jaehak {position:relative;top:0;left:0;width:725px;zoom:1}
+.myInfoBox .top_jaehak:after{display:block;clear:both;content:''}
+.myInfoBox .top_jaehak h4 {display:inline-block;font-size:15px;margin-top:4px;}
+.myInfoBox .top_jaehak div {position:absolute;top:0;right:0;}
+.viewBox .infoTip{font-size:12px; line-height:15px; color:#888; letter-spacing:-0.50px;}
+.viewBox .infoTip strong{color:#333; font-weight:normal;}
+.top_info .aboutAchieve{position:absolute; top:23px; right:30px;}
+.aboutAchieve .txt_about{padding-left:20px; color:#fff;  background:url("https://img.megastudy.net/campus/library/v2015/library/common/icon/ico_content.png") no-repeat 0 -487px;}
+.aboutAchieve .layer_cnt{right:-35px;}
+.aboutAchieve .layer_cnt .txtBox,#newAdress .layer_cnt .txtBox{border-top:2px solid #888; border-bottom:1px solid #d8d8d8; background:#f5f5f5; line-height:19px; padding:15px 17px 22px; letter-spacing:-0.50px;}
+.aboutAchieve .layer_cnt .guide,#newAdress .layer_cnt .guide{padding:0 16px;}
+.aboutAchieve .layer_cnt .guide p,#newAdress .layer_cnt .guide p{padding-left:16px;}
+.aboutAchieve .layer_cnt .guide p .bl{margin:0 4px 0 -14px;}
+.myUniv h4{font-size:15px; color:#424c5d; }
+.univList{overflow:hidden; background:#ecf1f8; padding:13px 21px;}
+.univList li{float:left; line-height:17px; padding-right:27px;}
+.univList li span{padding:0 5px; background:#869ab5; color:#fff; font-family:verdana; font-weight:bold; margin-right:9px;}
+.tit_box{font-size:20px; color:#424c5d; letter-spacing:-0.50px; line-height:14px; height:18px; overflow:visible;}
+.tit_box.fl{margin-right:10px;}
+.tit_info{color:#3b4048; font-size:23px; letter-spacing:-0.25px; font-weight:600}
+.myCurrent{position:relative;}
+.myCurrent .topDiv{position:relative; margin-bottom:10px;}
+.myCurrent .p3{position:absolute; top:1px; right:0;}
+.myBox{position:relative;}
+.myBox.w450{width:450px;}
+.myBox.w315{width:315px;}
+.myBox .p3{position:absolute; top:1px; right:0;}
+.myBox .p4{position:absolute; top:-4px; right:0;}
+.bnr_questCerti{display:block; width:313px; height:50px; border:1px solid #c0c7d3; background:#ecf1f8; margin-top:28px; text-align:center;}
+.bnr_questCerti span{padding:0 26px 0 0; font-size:17px; line-height:48px; letter-spacing:-1px; background:url("https://img.megastudy.net/campus/library/v2015/library/common/icon/ico_content.png") no-repeat right -444px;}
+
+ 
+/* È¸¿ø°¡ÀÔ - ·Î±×ÀÎÀÎÁõ ÆË¾÷ */
+.mypage_login_box{padding:20px 0 0 0}
+.mypage_input_box{position:relative; width:295px; height:62px; margin:20px auto 0;}
+.mypage_input_box input{border:1px solid #d8d8d8; width:192px; height:22px; margin-bottom:6px; font-size:13px;}
+.mypage_input_box label{position:absolute; top:3px; left:5px;}
+.mypage_input_box .login_btn{position:absolute; top:0; right:0; width:85px; height:62px; color:#fff; background:#424c5d; line-height:62px; text-align:center;}
+ 
+ 
+/*2021 ¼öÁ¤ - ¾ÆÀÌµð, ÆÐ½º¿öµå Ã£±â*/
+.content.joinArea .m_2_box.find {height:auto;min-height:auto;}
+.m_2_box.find .normal_tab_in2 {display:none;position: inherit;top:0;left:0;margin-top:50px;}
+.m_2_box.find .normal_tab_in2.on {display:block !important;}
+.m_2_box.find .normal_tab_in2 .member_table_01 th,
+.m_2_box.find .normal_tab_in2 .member_table_01 td {line-height:1;padding:15px;}
+.m_2_box.find .normal_tab_in2 .member_table_01 td input[type=text] {width:230px;height:40px;padding:0 10px;border:1px solid #dcdcdc;}
+.m_2_box.find .normal_tab_in2 .member_table_01 td input::placeholder {color:#888;}
+.m_2_box.find .normal_tab_in2 .member_table_01 td input::-webkit-input-placeholder {color: #888;}
+.m_2_box.find .normal_tab_in2 .member_table_01 td input:-ms-input-placeholder {color:#888;}
+.m_2_box.find .normal_tab_in2 .member_table_01 td input:disabled {background: #eeeeee;}
+.m_2_box.find .normal_tab_in2 .member_table_01 td input[type="radio"] {margin: 5px 0 0 0;}
+.m_2_box.find .normal_tab_in2 .member_table_01 th {font-size:16px;font-weight:bold;}
+.m_2_box.find .normal_tab_in2 p.tit {line-height:1;font-size:16px;}
+.m_2_box.find .normal_tab_in2 p.tit > span {position:relative;display:inline-block;line-height:1;padding:0 3px 3px;margin:0 0 25px;font-size:24px;font-weight:bold;z-index:10;}
+.m_2_box.find .normal_tab_in2 p.tit > span:before {content:'';display:block;position:absolute;left:0;bottom:0;width:100%;height:12px;background:#cce6ff;z-index:-1;}
+.m_2_box.find .cite_tab_li.tab_curr .cite_box .input_area {position:relative;display:block;font-size:0;}
+.m_2_box.find .cite_tab_li.tab_curr .cite_box .input_area + .input_area {margin-top:10px;}
+.m_2_box.find .cite_tab_li.tab_curr .cite_box .cite_txt {font-size:13px;color:#333;}
+.m_2_box.find .cite_tab_li.tab_curr .cite_box .info_txt_red {margin:10px 0 0;font-size:14px;color:#eb3b4b;}
+.m_2_box.find .cite_tab_li.tab_curr .cite_box .cite_btn {display:inline-block;width:110px;padding:0;height:42px;line-height:39px;margin:0 0 9px 5px;font-size:14px;vertical-align:middle;text-align:center;cursor: pointer;box-sizing:border-box;letter-spacing: -1px;}
+.m_2_box.find .cite_tab_li.tab_curr .cite_box .cite_btn.blue {color:#0082ff;border:1px solid #0082ff;}
+.m_2_box.find .cite_tab_li.tab_curr .cite_box .cite_btn.gray {width:110px;background:#888888;color:#fff;}
+.m_2_box.find .cite_tab_li.tab_curr .cite_box .cite_btn.sky {width:110px;background:#0082ff;color:#fff;}
+.m_2_box.find .cite_tab_li.tab_curr .cite_box .txt.on {position:absolute;top:13px;left:207px;font-size:14px;color:#333;}
+.m_2_box.find .member_table_01 .cite_tab_li {float:left;width:138px;}
+.m_2_box.find .member_table_01 .cite_tab_li label {float:left;font-size:16px;}
+.m_2_box.find .member_table_01 .cite_tab_li label input[type=radio]:checked + span {color:#0082ff;font-weight:bold;}
+.m_2_box.find .member_table_01 .cite_tab_li .cite_box  {position:relative;float:left;display:none;width:600px;}
+.m_2_box.find .member_table_01 .cite_tab_li:last-child .cite_box  {margin-left:-138px;}
+.m_2_box.find .member_table_01 .cite_tab_li.tab_curr {border:none !important;;margin:0;}
+.m_2_box.find .member_table_01 .cite_tab_li.tab_curr .cite_box {display:block !important;}
+
+/*2021 ï¿½ï¿½ï¿½ï¿½ - ï¿½ï¿½ï¿½Ìµï¿½, ï¿½Ð½ï¿½ï¿½ï¿½ï¿½ï¿½ Ã£ï¿½ï¿½ ï¿½Ë¾ï¿½*/
+#findDim.modal_dim {display:none; position:fixed; top:0; left:0; width:100%; height:100%; background: url('https://img.megastudy.net/campus/library/v2015/library/common/bg/dim_bg.png') repeat !important; z-index:1010;}
+.layer.find {width:770px; left:50%;top: 50%;background:#fff; display:none; position:fixed;z-index:1020;}
+.layer.find .popWrap {padding:60px 50px; }
+.layer.find.open {display:block;}
+.layer.find .popTitle {height:auto;background:#fff;}
+.layer.find .popTitle h1 {line-height:1.2;margin-top:18px;font-size:24px;color:#000;text-align:center;}
+.layer.find .pop_body {padding:0;}
+.layer.find .pop_body .btn_area {display:block;text-align:center;padding:50px 0 0;font-size:0;}
+.layer.find .pop_body .btn_area .btn {width:173px;height:43px;margin:0 5px;border:none;font-size:16px;color:#fff;font-weight:normal;border-radius: 40px;}
+.layer.find .pop_body .btn_area .btn.black {background:#424c5d;}
+.layer.find .pop_body .btn_area .btn.gray {background:#888888;}
+.layer.find .btn_closePop {position:absolute; right:30px; top:30px;width:30px;height:30px;cursor:pointer;background: url('https://img.megastudy.net/campus/library/v2015/library/common/btn/popup_close_find.png') repeat;}
+.layer.find .box {background:#f4f4f4; text-align:left; width:416px; margin:0 auto; padding:20px; margin-top:20px;}
+.layer.find .box p {font-size:14px; font-weight:normal; margin-top:0px; text-indent:-15px; margin-left:15px;}
+
+.scroll_table {width:100%;margin-top: 50px;position: relative;padding-top: 75px;border: 1px solid #d4d4d4;border-width:0 0 1px;}
+.scroll_table caption {position: absolute;left: -99999px;font-size: 0;}
+.scroll_table div {max-height: 177px;overflow: auto;overflow-x: hidden;}
+.scroll_table .pop_tb {width: 100%;table-layout: fixed;border-spacing: 0;border-collapse: collapse;}
+.scroll_table .pop_tb thead tr {position: absolute;top: 0;}
+.scroll_table .pop_tb thead tr th {width:335px;height: 75px;font-weight: normal;font-size:16px;color:#000;font-weight:bold;	text-align:center;background:#eee;border-top:2px solid #888;border-bottom:1px solid #cccccc;vertical-align: middle;}
+.scroll_table .pop_tb thead tr th:first-child {width:180px;font-weight: bold;}
+.scroll_table .pop_tb thead tr th:last-child {width:155px;padding:0;box-sizing:border-box;font-weight: bold;}
+.scroll_table .pop_tb td {width:335px;height: 58px;font-size:14px;text-align: center;color: #000;vertical-align: middle;border-top: 1px solid #d4d4d4;padding:0;}
+.scroll_table .pop_tb td:first-child {width:180px;text-align:left;padding:0 0 0 28px;box-sizing:border-box;}
+.scroll_table .pop_tb td:last-child {width:155px;}
+.scroll_table .pop_tb td label {font-weight:bold;font-size:14px;}
+.scroll_table .pop_tb td input[type="radio"] {margin:0 15px 0 0;vertical-align:middle;}
+.scroll_table .pop_tb tr {display: inline-table;width: 100%;table-layout: fixed;}
+
+.tb_area {display:block;margin-top:50px;}
+.tb_area caption {position: absolute;left: -99999px;font-size: 0;}
+.tb_area .pop_tb tr:first-child {border-top:2px solid #888;}
+.tb_area .pop_tb th,
+.tb_area .pop_tb td {padding:15px 0 15px 15px;text-align:left;vertical-align:middle;border-bottom:1px solid #cccccc;}
+.tb_area .pop_tb th {font-size:16px;color:#000;font-weight:normal;background:#f6f6f6;letter-spacing: -1px;}
+.tb_area .pop_tb td input[type=text],
+.tb_area .pop_tb td input[type=password] {width:230px;height:40px;padding:0 10px;border:1px solid #dcdcdc;}
+.tb_area .pop_tb td input[type=text]::placeholder,
+.tb_area .pop_tb td input[type=password]::placeholder {color:#888;}
+.tb_area .pop_tb td input::-webkit-input-placeholder {color: #888;}
+.tb_area .pop_tb td input:-ms-input-placeholder {color:#888;}
+.tb_area .pop_tb td span {font-size:14px;color:#000;font-weight:bold;}
+.tb_area .tb_txt {line-height:1.5;margin-top:18px;font-size:12px;color:#666;}
+.tb_area .tb_txt span {display:inline-block;line-height:1;margin:0 0 7px;font-size:14px;color:#000;}
+
+ 
+
+/* È¸¿ø°¡ÀÔ */
+.btnDiv{position:relative;}
+.btnDiv .right{position:absolute; top:-6px; right:0;}
+.btnDiv .left{position:absolute; top:-6px; left:0;}
+.btnDiv .fr{position:absolute; top:0px; right:0;}
+.btnDiv .fl{position:absolute; top:0px; left:0;}
+.btnDiv.taC .btn_round,.btnDiv .btn_icon{margin:0 3px;}
+.btnDiv.taR .btn_round,.btnDiv.taR .btn_icon{margin:0 0 0 3px;}
+/*round type - lhs*/
+.btn_round{display:inline-block;min-width:115px;width:115px;height:43px;padding:0 30px;border-radius:100px;text-align:center}
+.btn_round span{display:block;font-size:17px;line-height:40px}
+.btn_round.dark_arrow,.btn_round.dark_check,.btn_round.dark_srch{background:#424c5d;color:#fff}
+.btn_round.grey_x{background:#949ba7;color:#fff}
+.btn_round.white_arrow{border:1px solid #78808b;background:#ffffff;color:#424c5d}
+ 
+
+.tab_head,.tab_body{box-sizing:border-box}
+.tab_head .tab_menuList{zoom:1}
+.tab_head .tab_menuList:after{display:block;clear:both;content:''}
+.tab_head .tab_menuList>li{float:left}
+.tab_head .tab_menuList>li>a{display:block;text-align:center}
+.tab_head .tab_menuList>li.on a{background:#f6f6f6}
+.tab_body{position:relative}
+.tab_body>div{display:none}
+.tab_body>div.on{display:block;outline:0}
+
+/* ¾à°ü */
+.contentArea{float:right; width:788px;}
+.contentArea .titleDiv{overflow:hidden; margin-top:12px;}
+.contentArea .titleDiv h3{float:left; color:#333; font-size:32px; font-family:"MalGun Gothic"; letter-spacing:-2px; margin:0 17px 0 0;}
+.contentArea .titleDiv .txt{float:left; color:#555; font-size:15px; letter-spacing:-0.25px; padding-top:21px;}
+.content{margin-top:45px; min-height:600px; position:relative;}
+.content.joinArea{margin-top:25px;}
+.content.joinArea.p1{padding-top:11px;}
+.content.myPage{margin-top:36px;}
+.content.danka{margin-top:8px;}
+.content.teamplay{margin-top:20px;} 
+
+
+/* ¸Þ°¡¸àÅä ÅÇ */
+.rolling_slide_wrap {overflow:hidden; text-align:left; width:100%; margin:0 auto;}
+.rolling_slide_wrap * {font-family:'Noto Sans KR', Apple Gothic, "µ¸¿ò", Dotum, Verdana, sans-serif; box-sizing:border-box;}
+.rolling_left {border-bottom:2px solid #c7c7c7; }
+.rolling_left:after {content:''; display:block; clear:both;} 
+
+.rolling_left .left_menu {padding-bottom:30px; margin-top:25px;}
+.rolling_left .left_menu li {padding:15px 0; position:relative; cursor:pointer; font-size:24px; font-weight:bold; color:#999; text-align:center; line-height:1; display:inline-block; float:left; background:#fff;}
+
+.rolling_left .left_menu li{width:20%;}  
+
+	
+.rolling_left .left_menu li:before {content:''; display:none;; width:10px; height:10px; background:#cb8d42; -webkit-transform:rotate(-135deg); transform:rotate(-135deg); position:absolute; right:50%; bottom:-5px; margin-left:-5px; z-index:-1;}
+.rolling_left .left_menu li.active:after {content:''; display:block; width:80%; height:4px; background:#cb8d42; position:absolute; left:10%; bottom:-3px; z-index:2;} 
+.rolling_left .left_menu li.active {color:#cb8d42;}
+.rolling_left .left_menu li.active:before {display:block;}

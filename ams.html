@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>퍼블리싱 | AMS 페이지 가이드</title>
+
+    <!-- AMS CSS -->
+    <link rel="stylesheet" href="https://ams.megastudy.net/common/css/base.css">
+    <link rel="stylesheet" href="https://ams.megastudy.net/common/css/common.css">
+    <link rel="stylesheet" href="https://ams.megastudy.net/common/css/table.css">
+    <link rel="stylesheet" href="https://ams.megastudy.net/common/css/style.css">
+    <style>
+        #wrap{ background:none; padding:0;}
+        .guide_code .syntax{ overflow-y: scroll;}
+        .dotum{ font-family: "돋움" !important;}
+        .fz12{ font-size:12px;}
+        .state{text-align:center;}
+        /* .guide_area.dotum{ padding-top: 40px;} */
+        .guide_area.dotum{ padding-bottom: 20px;}
+    </style>
+    <!-- guide css -->
+    <link rel="stylesheet" type="text/css" href="css/guide.css">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/common.js"></script>
+</head>
+<body>
+<div id="wrap">
+    <header id="header">
+        <div class="header_wrap">
+            <a href="index.html">
+                <h1 class="logo">메가스터디</h1>
+            </a>
+            <nav class="nav_gnb">
+                <a href="intro.html">인트로/학원메인</a>
+                <a href="mojip_pc.html">PC모집</a>
+                <a href="mojip_mo.html">MO모집</a>
+                <a class="on" href="ams.html">AMS</a>
+                <a href="etc.html">기타</a>
+            </nav>
+        </div>
+    </header>
+    <aside id="aside">
+        <div class="snb_wrap">
+            <ul class="nav_snb">
+                <li class="on">
+                    <a href="#section01">주요 파일 및 폴더</a>
+                </li>
+                <li>
+                    <a href="#section02">버튼 및 플래그</a>
+                </li>
+                <li>
+                    <a href="#section03">테이블</a>
+                </li>
+                <li>
+                    <a href="#section04">타이틀</a>
+                </li>
+                <li>
+                    <a href="#section05">폼</a>
+                </li>
+            </ul>
+        </div> 
+    </aside>
+    <div id="content" style="padding-bottom:50%;">
+
+        <!-- 주요 파일 및 폴더 -->
+        <section id="section01" class="scroll">
+            <h2>주요 파일 및 폴더</h2>
+            <h3>공통 경로</h3>
+            <div class="guide_table">
+                <table class="table_style">
+                    <colgroup>
+                        <col style="width:20%;">
+                        <col style="width:80%">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>구분</th>
+                            <th>path</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>css</th>
+                            <td class="txtl">
+                                <a href="https://ams.megastudy.net/common/css/style.css" target="_blank"> https://ams.megastudy.net/common/css/style.css <br>
+                                <a href="https://ams.megastudy.net/common/css/base.css" target="_blank"> https://ams.megastudy.net/common/css/base.css <br>
+                                <a href="https://ams.megastudy.net/common/css/common.css" target="_blank"> https://ams.megastudy.net/common/css/common.css <br>
+                                <a href="https://ams.megastudy.net/common/css/table.css" target="_blank"> https://ams.megastudy.net/common/css/table.css <br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>script</th>
+                            <td class="txtl">
+                                <a href="https://amsdev.megastudy.net/common/js/jquery-1.12.4.min.js" target="_blank"> https://amsdev.megastudy.net/common/js/jquery-1.12.4.min.js <br>
+                                <a href="https://amsdev.megastudy.net/common/js/common.js" target="_blank"> https://amsdev.megastudy.net/common/js/common.js <br>
+                                <a href="https://amsdev.megastudy.net/common/js/commonUtil.js" target="_blank"> https://amsdev.megastudy.net/common/js/commonUtil.js <br>
+                                <a href="https://amsdev.megastudy.net/common/js/jquery_ajax_functions.js" target="_blank"> https://amsdev.megastudy.net/common/js/jquery_ajax_functions.js <br>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>폴더 분류</h3>
+            <div class="guide_table">
+                <table class="table_style">
+                    <colgroup>
+                        <col style="width:20%;">
+                        <col style="width:80%">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>대메뉴</th>
+                            <th>path</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>학원운영관리</th>
+                            <td class="txtl">
+                                /operate/qna_80_list.asp
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>강사관리</th>
+                            <td class="txtl">
+                                /tec/tec_info_sch.asp
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>전형관리</th>
+                            <td class="txtl">
+                                /application/20_mem/mem_list.asp 
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>회원관리</th>
+                            <td class="txtl">
+                                /member/mem_info_search.asp 
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>회원출결관리</th>
+                            <td class="txtl">
+                                /attend/2011/10_AttendManageList.asp 
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>강좌관리</th>
+                            <td class="txtl">
+                                /chr/Hak/LectureList.asp 
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>입학·수납관리</th>
+                            <td class="txtl">
+                                /pay/20_pay_reg/20_pay_20_reg.asp 
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>성적관리</th>
+                            <td class="txtl">
+                                /exam/60_quiz/10_reg/quiz_list.asp
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>교재관리</th>
+                            <td class="txtl">
+                                /book/n_book_list.asp 
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>수강관리</th>
+                            <td class="txtl">
+                                /consult/TeamPlay/20_MemberList_since_2024.asp 
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>MEGA SMART REPORT</th>
+                            <td class="txtl">
+                                /campus_life/monthly_report/monthly_report.asp 
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>원생현황</th>
+                            <td class="txtl">
+                                /atms/10_mem/10_StudentMain.asp 
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>강사현황</th>
+                            <td class="txtl">
+                                /atms/20_staf/10_TeacherStatus/10_AcaStatus.asp 
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>매출관리</th>
+                            <td class="txtl">
+                                /atms/30_sale/main/10_set_main.asp 
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>설문관리</th>
+                            <td class="txtl">
+                                /poll/poll_60_search.asp 
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>권한관리</th>
+                            <td class="txtl">
+                                /access/access_user_info_list.asp 
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 버튼 및 플래그 -->
+        <section id="section02" class="scroll">
+            <h2>버튼 및 플래그</h2>
+
+            <h3>텍스트버튼</h3>
+            
+            <div class="guide_area dotum">
+                <button type="button" class="btn_style">승인요청</button>
+                <button type="button" class="btn_style typeGR">보기</button>
+                <button type="button" class="btn_style typeGR">임시저장</button>
+                <button type="button" class="btn_style typeBK">목록</button>
+            </div>
+
+            <div class="guide_code">
+    <xmp class="syntax">
+    <button type="button" class="btn_style">승인요청</button>
+    <button type="button" class="btn_style typeGR">보기</button>
+    <button type="button" class="btn_style typeGR">임시저장</button>
+    <button type="button" class="btn_style typeBK">목록</button>
+    </xmp>
+            </div>
+            <div class="guide_area dotum">
+                <a class="btn_txt blue" href="">입고완료</a>
+                <a class="btn_txt gray" href="">임시저장</a>
+                <a class="btn_txt dark" href="">반려</a>
+                <a class="btn_txt blue" href="">승인완료</a>
+                <a class="btn_txt red" href="">입고대기</a>
+                <a class="btn_txt dark" href="">입고증(메가스터디교육).jpg</a>
+            </div>
+
+            <div class="guide_code">
+    <xmp class="syntax">
+    <a class="btn_txt blue" href="">입고완료</a>
+    <a class="btn_txt gray" href="">임시저장</a>
+    <a class="btn_txt dark" href="">반려</a>
+    <a class="btn_txt blue" href="">승인완료</a>
+    <a class="btn_txt red" href="">입고대기</a>
+    <a class="btn_txt dark" href="">입고증(메가스터디교육).jpg</a>
+    </xmp>
+            </div>
+
+            <h3>이미지버튼</h3>
+            <div class="guide_area dotum">
+
+                <span class="btn_cursor"><img src="https://ams.megastudy.net/img/ams/img/btn/btn_search.gif" align="absmiddle" alt="조회"></span>
+                <span class="btn_cursor"><img src="https://amsdev.megastudy.net/img/ams/img/btn/btn_all.gif" align="absmiddle" alt="일괄적용"></span>
+                <span class="btn_cursor"><img src="https://amsdev.megastudy.net/img/ams/img/btn/btn_del.gif" align="absmiddle" alt="삭제"></span>
+                <a><img src="https://ams.megastudy.net/img/ams/img/btn/btn_reg_order.png" align="absmiddle" alt="구매주문서 작성"></a>
+                <span class="btn_cursor"><img src="https://amsdev.megastudy.net/img/ams/img/btn/btn_aca_new.gif" align="absmiddle" alt="신규학원등록"></span>
+                <span class="btn_cursor"><img src="https://amsdev.megastudy.net/img/ams/img/btn/btn_set_new.gif" align="absmiddle" alt="세트 교재 등록"></span>
+                <span class="btn_cursor"><img src="https://ams.megastudy.net/img/ams/img/btn/btn_qnawrite.gif" align="absmiddle" alt="글쓰기"></span>
+                <span class="btn_cursor"><img src="https://amsdev.megastudy.net/img/ams/img/btn/btn_excel03.gif" align="absmiddle" alt="엑셀"></span>
+                <span class="btn_cursor"><img src="https://amsdev.megastudy.net/img/ams/img/btn/btn_zipcode.gif" align="absmiddle" alt="우편번호"></span>
+                <span class="btn_cursor"><img src="https://amsdev.megastudy.net/img/ams/img/btn/book_order_print.png" align="absmiddle" alt="교재주문서 선택인쇄"></span>
+                <span class="btn_cursor" onclick="javascript:fnc_send_sms();"><img src="https://ams.megastudy.net/img/ams/img/btn/btn_sms_send02.gif" align="absmiddle" alt="SMS 발송"></span>
+            </div>
+            <div class="guide_code">
+    <xmp class="syntax">
+    <span class="btn_cursor"><img src="https://ams.megastudy.net/img/ams/img/btn/btn_search.gif" align="absmiddle" alt="조회"></span>
+    <span class="btn_cursor"><img src="https://amsdev.megastudy.net/img/ams/img/btn/btn_all.gif" align="absmiddle" alt="일괄적용"></span>
+    <span class="btn_cursor"><img src="https://amsdev.megastudy.net/img/ams/img/btn/btn_del.gif" align="absmiddle" alt="삭제"></span>
+    <a><img src="https://ams.megastudy.net/img/ams/img/btn/btn_reg_order.png" align="absmiddle" alt="구매주문서 작성"></a>
+    <span class="btn_cursor"><img src="https://amsdev.megastudy.net/img/ams/img/btn/btn_aca_new.gif" align="absmiddle" alt="신규학원등록"></span>
+    <span class="btn_cursor"><img src="https://amsdev.megastudy.net/img/ams/img/btn/btn_set_new.gif" align="absmiddle" alt="세트 교재 등록"></span>
+    <span class="btn_cursor"><img src="https://ams.megastudy.net/img/ams/img/btn/btn_qnawrite.gif" align="absmiddle" alt="글쓰기"></span>
+    <span class="btn_cursor"><img src="https://amsdev.megastudy.net/img/ams/img/btn/btn_excel03.gif" align="absmiddle" alt="엑셀"></span>
+    <span class="btn_cursor"><img src="https://amsdev.megastudy.net/img/ams/img/btn/btn_zipcode.gif" align="absmiddle" alt="우편번호"></span>
+    <span class="btn_cursor"><img src="https://amsdev.megastudy.net/img/ams/img/btn/book_order_print.png" align="absmiddle" alt="교재주문서 선택인쇄"></span>
+    <span class="btn_cursor"><img src="https://ams.megastudy.net/img/ams/img/btn/btn_sms_send02.gif" align="absmiddle" alt="SMS 발송"></span>
+    </xmp>
+            </div>
+
+            <h3>플래그</h3>
+            <div class="guide_area dotum">
+                <img src="https://ams.megastudy.net/img/ams/img/icon/ico_important.gif" align="absmiddle" alt="중요">
+                <img src="https://ams.megastudy.net/img/ams/img/icon/n.gif" alt="new">
+        
+                <span class="state s_btn state04" alt="대기" style="cursor:hand">대기</span>
+                <span class="state s_btn state05" alt="완료" style="cursor:hand">완료</span>
+                <span class="state s_btn state06" alt="반려" style="cursor:hand">반려</span>
+                <span class="state s_btn state07" alt="처리중" style="cursor:hand">처리중</span>
+            </div>
+            <div class="guide_code">
+    <xmp class="syntax">
+    <img src="https://ams.megastudy.net/img/ams/img/icon/ico_important.gif" align="absmiddle" alt="중요">
+    <img src="https://ams.megastudy.net/img/ams/img/icon/n.gif" alt="new">
+
+    <span class="state s_btn state04" alt="대기" style="cursor:hand">대기</span>
+    <span class="state s_btn state05" alt="완료" style="cursor:hand">완료</span>
+    <span class="state s_btn state06" alt="반려" style="cursor:hand">반려</span>
+    <span class="state s_btn state07" alt="처리중" style="cursor:hand">처리중</span>
+    </xmp>
+            </div>
+
+        </section>
+
+        <!-- 테이블 -->
+        <section id="section03" class="scroll">
+            <h2>테이블</h2>
+
+            <h3>기본 테이블 스타일</h3>
+            <div class="guide_code">
+    <xmp class="syntax">
+    <div class="tStyle4">
+        <form name="" method="post" action="">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <input type="hidden" name="method" value="del">
+                <colgroup>
+                    <col width="50">
+                    <col width="110">
+                    <col width="110">
+                    <col width="">
+                    <col width="90">
+                    <col width="70">
+                    <col width="90">
+                    <col width="90">
+                    <col width="90">
+                    <col width="90">
+                    <col width="50">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <td>No</td>
+                        <td>요청구분</td>
+                        <td>요청부서</td>
+                        <td>제목</td>
+                        <td>요청일</td>
+                        <td>요청자</td>
+                        <td>승인자1<br>(부서장)</td>
+                        <td>승인자2<br>(개발팀장)</td>
+                        <td>처리자</td>
+                        <td>요청자<br>테스트</td>
+                        <td>조회</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="" name="" onmouseover="this.className='on'" style="background-color:#f3f3f3;font-weight:normal;">
+                    </tr>
+                    <tr id="" name="" onmouseover="this.className='on'" style="">
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+    </xmp>
+            </div>
+
+        </section>  
+
+        <!-- 타이틀 -->
+        <section id="section04" class="scroll">
+
+            <h2>타이틀</h2>
+
+            <h3>bullet 타이틀</h3>
+            <div class="guide_area dotum fz12">
+                <span class="point1">단일교재 정보</span>&nbsp;
+                <span class="point2">생년월일/성별</span>&nbsp;
+                <span class="point3">단일교재 정보 : <span class="orange b">00</span> 권</span>&nbsp;
+                <span class="point4">재등록 기준</span>&nbsp;
+            </div>
+            <div class="guide_code">
+    <xmp class="syntax">
+    <span class="point1">단일교재 정보</span>
+    <span class="point2">생년월일/성별</span>
+    <span class="point3">단일교재 정보 : <span class="orange b">00</span> 권</span>
+    <span class="point4">재등록 기준</span>
+    </xmp>
+            </div>
+
+            <h3>arrow 타이틀</h3>
+            <div class="guide_area dotum fz12">
+                <span class="arrow1">사업구분</span>&nbsp;
+                <span class="arrow2">교재명 : </span>&nbsp;
+            </div>
+            <div class="guide_code">
+    <xmp class="syntax">
+    <span class="arrow1">사업구분</span>
+    <span class="arrow2">교재명 : </span>
+    </xmp>
+            </div>
+
+
+        </section>
+    
+
+        <!-- 폼 -->
+        <section id="section05" class="scroll">
+            <h2>폼</h2>
+
+            <h3>input</h3>
+            <div class="guide_area dotum fz12">
+                <input name="" type="text" style="width:84px" maxlength="20" onchange="">
+            </div>
+            <div class="guide_code">
+    <xmp class="syntax">
+    <input name="" type="text" style="width:84px" maxlength="20" onchange="">
+    </xmp>
+            </div>
+
+            <h3>select</h3>
+            <div class="guide_area dotum fz12">
+                <select name="getClassCode" onchange="chgClassBox();">
+                    <option value="11" selected="">재수정규반</option>
+                    <option value="12">연합반</option>
+                    <option value="13">단과반</option>
+                </select>
+            </div>
+            <div class="guide_code">
+    <xmp class="syntax">
+    <select name="getClassCode" onchange="">
+        <option value="11" selected="">재수정규반</option>
+        <option value="12">연합반</option>
+        <option value="13">단과반</option>
+    </select>
+    </xmp>
+            </div>
+
+            <h3>textarea</h3>
+            <div class="guide_area dotum fz12">
+                <textarea id="" name="" style="width:100%;height:100px;ime-mode:active;resize:none;"></textarea>
+            </div>
+            <div class="guide_code">
+    <xmp class="syntax">
+    <textarea id="" name="" style="width:100%;height:100px;ime-mode:active;resize:none;"></textarea>
+    </xmp>
+            </div>
+
+
+            
+
+        </section>
+
+
+
+    </div>
+</div>
+
+</body>
+</html>

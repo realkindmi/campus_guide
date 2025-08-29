@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>퍼블리싱 | 모집 페이지 가이드</title>
+   <link rel="stylesheet" type="text/css" href="css/guide.css">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/common.js"></script>
+
+    <!-- MO CSS -->
+    <link rel="stylesheet" type="text/css" href="css/mob_renew.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="/campus_common/guide/pub/css/mob_common.css" /> -->
+ 
+</head>
+<body>
+<div id="wrap">
+    <header id="header">
+        <div class="header_wrap">
+            <a href="index.html">
+                <h1 class="logo">메가스터디</h1>
+            </a>
+            <nav class="nav_gnb">
+                <a href="intro.html">인트로/학원메인</a>
+                <a href="mojip_pc.html">PC모집</a>
+                <a class="on" href="mojip_mo.html">MO모집</a>
+                <a href="ams.html">AMS</a>
+                <a href="etc.html">기타</a>
+            </nav>
+        </div>
+    </header>
+    <aside id="aside">
+        <div class="snb_wrap">
+            <ul class="nav_snb">
+                <li class="on">
+                    <a href="#section01">파일 및 폴더</a>
+                </li>
+                <li>
+                    <a href="#section02">마크업 & CSS 작업규칙</a>
+                </li>
+                <li>
+                    <a href="#section03">레이아웃 구조</a>
+                </li>
+                <li>
+                    <a href="#section04">CSS 라이브러리</a>
+                </li>
+            </ul>
+        </div> 
+    </aside>
+    <div id="content"> 
+        <!-- 파일 및 폴더 -->
+        <section id="section01" class="scroll">
+            <h2>파일 및 폴더</h2>
+
+            <h3>모집 페이지 작업시 기본 폴더 구조</h3>
+            <div class="guide_desc">
+                <p>- 학원/nsu/class/년도/년도_서비스명</p>
+                <p>- 기숙/nsu/class/년도/년도_서비스명</p>
+                <p>- 재학/jaehak/class/년도/년도_서비스명</p>
+                <p>*단과의 경우, 학원만 해당</p>
+            </div> 
+            <div class="guide_table">
+                <table class="table_style">
+                    <colgroup>
+                        <col style="width:7%;">
+                        <col style="width:48%;">
+                        <col style="width:10%;">
+                        <col style="width:10%;">
+                        <col style="width:10%;">
+                        <col style="width:15%;">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>학원</th>
+                            <td class="txtl">gangnam, seocho, gangbuk, noryangjin, sinchon, pyeongchon, bucheon, bundang, ilsan, songpa</td>
+                            <td>nsu</td>
+                            <td>class</td>
+                            <td>년도</td>
+                            <td>년도_서비스명</td>
+                        </tr>
+                        <tr>
+                            <th>기숙</th>
+                            <td class="txtl">yangji, yangjim, ansung</td>
+                            <td>nsu</td>
+                            <td>class</td> 
+                            <td>년도</td>
+                            <td>년도_서비스명</td>
+                        </tr>
+                        <tr>
+                            <th>재학</th>
+                            <td class="txtl">seongbuk</td>
+                            <td>jaehak</td> 
+                            <td>class</td> 
+                            <td>년도</td>
+                            <td>년도_서비스명</td>
+                        </tr>
+                        <tr>
+                            <th>*단과</th>
+                            <td class="txtl" colspan="2">
+                                gangnam, seocho, gangbuk, noryangjin, sinchon, pyeongchon, bucheon, bundang, ilsan, songpa 
+                            </td> 
+                            <td colspan="2">nsu</td> 
+                            <td>semi.asp</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>MO 페이지 탭 작업시</h3>
+            <div class="guide_desc">
+                <p>- 학원/nsu/class/inc_tab_menu.asp</p> 
+                <p>- 기숙/nsu/class/inc_tab_menu.asp</p> 
+                <p>- 재학/jaehak/class/inc_tab_menu.asp</p> 
+            </div>
+            <div class="guide_table">
+                <table class="table_style">
+                    <colgroup>
+                        <col style="width:7%;">
+                        <col style="width:58%;"> 
+                        <col style="width:10%;">
+                        <col style="width:10%;">
+                        <col style="width:15%;">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>학원</th>
+                            <td class="txtl">gangnam, seocho, gangbuk, noryangjin, sinchon, pyeongchon, bucheon, bundang, ilsan, songpa</td>
+                            <td>nsu</td>
+                            <td>class</td>
+                            <td>inc_tab_menu.asp</td>
+                        </tr>
+                        <tr>
+                            <th>기숙</th>
+                            <td class="txtl">yangji, yangjim, ansung</td>
+                            <td>nsu</td>
+                            <td>class</td> 
+                            <td>inc_tab_menu.asp</td>
+                        </tr>
+                        <tr>
+                            <th>재학</th>
+                            <td class="txtl">seongbuk</td>
+                            <td>jaehak</td> 
+                            <td>class</td> 
+                            <td>inc_tab_menu.asp</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>MO 탭</h3>
+            <div class="guide_desc">
+                <p>- aria-controls="edu-semi__" &#8594; 01 ~ 99 사이 모집페이지 간 겹치지 않도록 지정한다.</p>
+                <p>- N 아이콘 추가 &#8594; &lt;em&gt;N &lt;/em&gt;</p>
+            </div> 
+            <div class="guide_code">
+        <xmp class="syntax"> 
+            <div class="sub_header_wrap ">
+                <!--<a href="javascript:history.back();" class="back_btn"><img src="<%=Application("img_path_mob")%>/asset/img/back_btn.png" alt="" /></a>-->
+                <h2></h2>
+                <em class="drop_btn"></em>
+                <div class="drop_menu_wrap">
+                    <ul class="drop_menu">
+                        <li><a href="javascript:void(0);" aria-controls="edu-semi66" url="/gangbuk/nsu/class/2025/2025_half_pre/index.asp"><span>2025 Pre 반수시작반</span><em>N</em></a></li>
+                        <li><a href="javascript:void(0);" aria-controls="edu-semi67" url="/gangbuk/nsu/class/2025/2025_half/index.asp"><span>2025 반수시작반</span></a></li> 
+                        
+                        <li><a href="javascript:void(0);" aria-controls="edu-semi86" url="/gangbuk/nsu/semi.asp"><span>6월 단과</span><em>N</em></a></li> 
+                    </ul>
+                </div>
+            </div> 
+        </xmp>
+            </div>
+        </section>
+
+        <!-- 마크업 & CSS 작업규칙 -->
+        <section id="section02" class="scroll">
+            <h2>마크업 작업규칙</h2> 
+
+            <h3>파일의 인코딩</h3>
+            <p>*.asp, *.css, *.js의 파일의 저장 방식을 UTF-8로 설정한다.</p>
+            <div class="guide_table">
+                <h4>문자셋(charset)별 인코딩</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>문자셋(charset)</th>
+                            <th>기본 인코딩</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>charset=UTF-8</td>
+                            <td>ANSI</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div> 
+
+            <h2 class="mt80">CSS 작업규칙</h2>
+
+            <h3>공통 CSS 파일위치</h3>
+            <ul class="guide_list dis">
+                <li>
+                    <strong>공통</strong>/common/css/common.css 
+                </li> 
+                <li>
+                    <strong>모집</strong>/common/css/mob_renew.css 
+                </li> 
+            </ul> 
+        </section>
+ 
+        <!-- 레이아웃 구조 -->
+        <section id="section03" class="scroll">  
+            <h2>레이아웃 구조</h2>
+
+            <h3>기본 : Tab 3개</h3>
+            <div class="table_box2 bod_list m_inner pass">
+                <div class="list_menu_wrap">
+                    <ul class="list_menu triple">
+                        <li class="on"><a href="javascript:void(0);"><span>모집개요</span></a></li>
+                        <li><a href="javascript:void(0);"><span>입학기준</span></a></li>
+                        <li><a href="javascript:void(0);"><span>장학제도</span></a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="guide_code">
+        <xmp class="syntax">
+            <div class="list_menu_wrap">
+                <ul class="list_menu triple">
+                    <li class="on"><a href="javascript:void(0);"><span>모집개요</span></a></li>
+                    <li><a href="javascript:void(0);"><span>입학기준</span></a></li> 
+                    <li><a href="javascript:void(0);"><span>장학제도</span></a></li>  
+                </ul>
+            </div>
+        </xmp>
+            </div>
+            <div class="guide_desc">
+                <p>탭 개수에 따라 다음의 클래스를 사용한다.</p>
+            </div>
+            <div class="guide_code">
+        <xmp class="syntax">
+        .list_menu .triple  
+        .list_menu .double   
+        </xmp>
+            </div>
+
+            <h3>탭 관련 스크립트</h3>
+            <div class="guide_desc">
+                <p>탭 클릭시 알럿 및 새로고침 방지</p>
+            </div>
+            <div class="guide_code">
+        <xmp class="syntax">
+        <div class="list_menu_wrap">
+            <ul class="list_menu triple">
+                <li class="on"><a href="javascript:void(0);"><span>모집개요</span></a></li>
+                <li><a href="javascript:void(0);"><span>입학기준</span></a></li> 
+                <li class="no_link"><a href="javascript:void(0);" onclick="alert('준비 중입니다.'); return false"><span>장학제도</span></a></li>  
+            </ul>
+        </div>
+
+        <script>
+            $('li .no_link').click(function(){
+                event.preventDefault();
+            });
+        </script>
+        </xmp>
+            </div> 
+             
+            <h3>기본 레이아웃 : Contents 3개</h3> 
+            <p>
+                div.list_contents_wrap에 클래스 contents_00 추가하여 탭 작업한다. 
+            </p>  
+            <div class="guide_code">
+        <xmp class="syntax">
+        <!-- contents01 -->
+        <div class="list_contents_wrap contents01 on">
+            <div class="table_box2 m_inner">
+                <div class="box">
+                    <div class="bod_list tal mt65">
+                        <table cellspacing="0" cellpadding="0" border="0" class="lec_info_tstyle4">
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //contents01 -->
+
+        <!-- contents02 -->
+        <div class="list_contents_wrap contents02">
+            <div class="table_box2 bod_list m_inner pass"> 
+                <h4 class="lec_sub_title">[무시험 전형] 메디컬 팀플</h4>
+                <table cellspacing="0" cellpadding="0" border="0" class="lec_info_tstyle4">
+                </table> 
+                <div class="m_btn_wrap single mt10">
+                    <a href="javascript:goApplySimple(277,5391);" class="m_btn_area type01" tabindex="0" style="cursor: pointer;">온라인 원서접수</a>
+                </div>  
+            </div>  
+        </div>
+        <!-- //contents02 -->
+
+        <!-- contents03 -->
+        <div class="list_contents_wrap contents03">
+            <div class="table_box2 bod_list m_inner pass"> 
+                <div class="box mt60">
+                    <h4 class="lec_sub_title mt15">2024 수능 장학</h4>
+                    <table cellspacing="0" cellpadding="0" border="0" class="lec_info_tstyle4 mt20">
+                    </table> 
+                    
+                    <div class="m_btn_wrap single mt30">
+                        <a href="https://gangbuk.megastudy.net/gangbuk/nsu/nsu/2025/2025_teamplay_medical/teamplay_01.asp" class="m_btn_area type02">PC 페이지 바로가기</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //contents03 -->
+        </xmp>
+            </div> 
+        </section>
+
+        <!-- CSS 라이브러리 -->
+        <section id="section04" class="scroll">
+            <h2>CSS 라이브러리</h2>
+
+            <h3>여백</h3> 
+            <div class="guide_code">
+        <xmp class="syntax">
+        .mt10 {margin-top:10px !important;}
+        .mt15 {margin-top:15px !important;}
+        .mt20 {margin-top:20px !important;}
+        .mt30 {margin-top:30px !important;}
+        .mt50 {margin-top:50px !important;}
+        .mt60 {margin-top:60px !important;}
+        .mt65 {margin-top:65px !important;}
+        </xmp>
+            </div> 
+
+            <h3>텍스트</h3> 
+            <h4>· 테이블 타이틀</h4>
+            <h5>.lec_sub_title</h5> 
+            <div class="table_box2 bod_list m_inner pass"> 
+                <h4 class="lec_sub_title">[무시험 전형] 메디컬&middot;서울대 특별반_메디컬</h4>
+                <h4 class="lec_sub_title">모의고사 장학</h4>
+            </div>
+
+            <h4 class="mt50">· 강조 텍스트</h4>
+            <h5>.point_color <span style="color:#000;">{color:#0052a8;}</span> </h5> 
+            <div class="table_box2 bod_list m_inner pass">
+                <div style="padding:10px;border:1px solid #ccc;">
+                    TEXT TEXT TEXT TEXT TEXT <strong style="color:#0052a8;">TEXT TEXT TEXT TEXT TEXT</strong> TEXT TEXT TEXT TEXT TEXT
+                </div>
+            </div>
+                
+
+            <h3>테이블</h3> 
+            <h5>.lec_info_tstyle4</h5> 
+            <div class="table_box2 bod_list m_inner pass">
+                <table cellspacing="0" cellpadding="0" border="0" class="lec_info_tstyle4">
+                    <colgroup>
+                        <col width="50%" span="2">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">TEXT</th>
+                            <th scope="col">TEXT</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>text</td>
+                            <td>text</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>버튼</h3>   
+            <h5>.m_btn_wrap.single</h5>  
+            <div class="table_box2 bod_list m_inner pass">   
+                <div class="m_btn_wrap single mt10">
+                    <a href="javascript:goApplySimple(284,5566);" class="m_btn_area type01" tabindex="0" style="cursor: pointer;">온라인 원서접수</a>
+                </div>
+
+                <div class="m_btn_wrap single mt30">
+                    <a href="https://ansung.megastudy.net/ansung/nsu/2025/2025_half/half_01.asp" class="m_btn_area type02">PC 페이지 바로가기</a>
+                </div>
+            </div>
+   
+            <h3>설명박스</h3> 
+            <h5>.gray_box</h5> 
+            <div class="table_box2 bod_list m_inner pass">
+                <div class="gray_box taL mt10">
+                    <p>※ 장학제도</p>
+                    <ul class="ml17 mt5">
+                        <li>· 장학 유지기준 없음 (단, 6·9월 평가원 모의고사는 유지조건 있음)</li>
+                        <li>· 수능 전형 : 2024 수능 성적증명서(문서번호 포함된 원본) 제출</li>
+                        <li>· 평가원 전형 : 2024 6·9월 평가원 모의고사, 2025 6월 평가원 모의고사 결과 확인서 원본 제출</li> 
+                    </ul>
+                    <p class="mt10">※ 제출된 성적표가 원본과 다를 경우, 지급된 장학금은 전액 반환해야 하며 퇴원 조치됨</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+</body>
+</html>
